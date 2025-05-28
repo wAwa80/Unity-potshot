@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Facebook.Unity;
+//using Facebook.Unity;
 
 public class SDK : MonoBehaviour {
 	public static SDK instance;
@@ -33,46 +33,46 @@ public class SDK : MonoBehaviour {
             Debug.Log("flurry");
         }
 
-        if (FB.IsInitialized)
-        {
-            FB.ActivateApp();
-        }
-        else
-        {
-            FB.Init(() =>
-            {
-                FB.ActivateApp();
-            });
-        }
+        //if (FB.IsInitialized)
+        //{
+        //    FB.ActivateApp();
+        //}
+        //else
+        //{
+        //    FB.Init(() =>
+        //    {
+        //        FB.ActivateApp();
+        //    });
+        //}
     }
     public void Start()
     {
-        if (FB.IsInitialized)
-        {
-            FB.ActivateApp();
-        }
-        else
-        {
-            FB.Init(() =>
-            {
-                FB.ActivateApp();
-            });
-        }
+        //if (FB.IsInitialized)
+        //{
+        //    FB.ActivateApp();
+        //}
+        //else
+        //{
+        //    FB.Init(() =>
+        //    {
+        //        FB.ActivateApp();
+        //    });
+        //}
     }
 
     private void OnApplicationPause(bool pauseStatus) {
 		if(!pauseStatus){
-            if (FB.IsInitialized)
-            {
-                FB.ActivateApp();
-            }
-            else
-            {
-                FB.Init(() =>
-                {
-                    FB.ActivateApp();
-                });
-            }
+            //if (FB.IsInitialized)
+            //{
+            //    FB.ActivateApp();
+            //}
+            //else
+            //{
+            //    FB.Init(() =>
+            //    {
+            //        FB.ActivateApp();
+            //    });
+            //}
         }
         
 	}
