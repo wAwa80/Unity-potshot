@@ -44,7 +44,7 @@ public class Analytics : MonoBehaviour {
 			PlayerPrefs.SetInt (string.Format ("UmengFirst_{0}{1}", eventId, app_bundleVersion), 1);
 			GA.Event (eventId);
             NativeCaller.FlurryLogEvent(eventId);
-            Kochava.Tracker.SendEvent (eventId);
+            //Kochava.Tracker.SendEvent (eventId);
         }
 	}
 
@@ -58,18 +58,18 @@ public class Analytics : MonoBehaviour {
 			PlayerPrefs.SetInt (string.Format ("UmengFirst_{0}{1}{2}", eventId, value, app_bundleVersion), 1);
 			GA.Event (eventId, value);
             NativeCaller.FlurryLogEvent(eventId, value);
-            Kochava.Tracker.SendEvent (eventId, value);
+            //Kochava.Tracker.SendEvent (eventId, value);
         }
 	}
 
 	public void SendMessageByID(string eventId){
 		GA.Event(eventId);
 		NativeCaller.FlurryLogEvent(eventId);
-		Kochava.Tracker.SendEvent(eventId);
+		//Kochava.Tracker.SendEvent(eventId);
 	}
 	public void SendMessageByID(string eventId,string value){
 		GA.Event(eventId,value);
 		NativeCaller.FlurryLogEvent(eventId,value);
-		Kochava.Tracker.SendEvent(eventId,value);
+		//Kochava.Tracker.SendEvent(eventId,value);
 	}
 }
