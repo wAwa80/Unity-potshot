@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Umeng;
+//using Umeng;
 public class Analytics : MonoBehaviour {
 	public string app_bundleVersion="1.0.1";
     // Use this for initialization
@@ -23,8 +23,8 @@ public class Analytics : MonoBehaviour {
         _instance = this;
     }
     void Start () {
-		GA.Start();
-		GA.SetLogEnabled(false);
+		//GA.Start();
+		//GA.SetLogEnabled(false);
 		Analytics.Instance.SendFirstMessageByID(AllDataInGameTest.logozhanshi_renci,1+"");
     }
 
@@ -42,7 +42,7 @@ public class Analytics : MonoBehaviour {
 	{
 		if (PlayerPrefs.HasKey (string.Format ("UmengFirst_{0}{1}", eventId, app_bundleVersion)) == false) {
 			PlayerPrefs.SetInt (string.Format ("UmengFirst_{0}{1}", eventId, app_bundleVersion), 1);
-			GA.Event (eventId);
+			//GA.Event (eventId);
             NativeCaller.FlurryLogEvent(eventId);
             //Kochava.Tracker.SendEvent (eventId);
         }
@@ -56,19 +56,19 @@ public class Analytics : MonoBehaviour {
 	{
 		if (PlayerPrefs.HasKey (string.Format ("UmengFirst_{0}{1}{2}", eventId, value, app_bundleVersion)) == false) {
 			PlayerPrefs.SetInt (string.Format ("UmengFirst_{0}{1}{2}", eventId, value, app_bundleVersion), 1);
-			GA.Event (eventId, value);
+			//GA.Event (eventId, value);
             NativeCaller.FlurryLogEvent(eventId, value);
             //Kochava.Tracker.SendEvent (eventId, value);
         }
 	}
 
 	public void SendMessageByID(string eventId){
-		GA.Event(eventId);
+		//GA.Event(eventId);
 		NativeCaller.FlurryLogEvent(eventId);
 		//Kochava.Tracker.SendEvent(eventId);
 	}
 	public void SendMessageByID(string eventId,string value){
-		GA.Event(eventId,value);
+		//GA.Event(eventId,value);
 		NativeCaller.FlurryLogEvent(eventId,value);
 		//Kochava.Tracker.SendEvent(eventId,value);
 	}

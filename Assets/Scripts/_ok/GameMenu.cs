@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 using UnityEngine.U2D;
-using Umeng;
+//using Umeng;
 
 public enum LoseChangeStateMgr
 {
@@ -506,7 +506,7 @@ public class GameMenu : MonoBehaviour
         if (this.currentLevel != 0)
         {
             //Umeng关卡失败
-            GA.FinishLevel(currentLevel + "-" + currentsubLevel);
+            //GA.FinishLevel(currentLevel + "-" + currentsubLevel);
 
         }
         e_loseState = LoseChangeStateMgr.First;
@@ -730,7 +730,7 @@ public class GameMenu : MonoBehaviour
         if (this.currentLevel != 0 )
         {
             //Umeng关卡成功
-            GA.FinishLevel(currentLevel + "-" + currentsubLevel);
+            //GA.FinishLevel(currentLevel + "-" + currentsubLevel);
 
         }
 
@@ -909,7 +909,7 @@ public class GameMenu : MonoBehaviour
         {
             Analytics.Instance.SendFirstMessageByID(currentLevel + "-" + currentsubLevel, gameWord.currentPrefab.name);
             Analytics.Instance.SendMessageByID(currentLevel + "-" + currentsubLevel, gameWord.currentPrefab.name);
-            GA.StartLevel(currentLevel + "-" + currentsubLevel);
+            //GA.StartLevel(currentLevel + "-" + currentsubLevel);
             Analytics.Instance.SendFirstMessageByID(AllDataInGameTest.xiaoguanyusheming, currentLevel + "-" + currentsubLevel+"-"+ gameWord.currentPrefab.name);
             Analytics.Instance.SendMessageByID(AllDataInGameTest.xiaoguanyusheming,currentLevel + "-" + currentsubLevel+"-"+gameWord.currentPrefab.name);
         }

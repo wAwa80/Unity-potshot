@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Game.Walker;
-using Umeng;
+//using Umeng;
 using UnityEngine;
 
 public class GameWorld : MonoBehaviour
