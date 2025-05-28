@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGB7NK39E6"></script>-->
+    <script>
+        //window.dataLayer = window.dataLayer || [];
+        //function gtag() { dataLayer.push(arguments); }
+        //gtag('js', new Date());
+
+        //gtag('config', 'G-NGB7NK39E6');
+
+        //gtag('get', 'G-NGB7NK39E6', 'client_id', (clientID) => {
+
+        //    sendOfflineEvent(clientID, "tutorial_begin")
+        //});
+
+        //function sendOfflineEvent(clientID, eventName, eventData) {
+        //    // Send necessary data to your server...
+        //    window.client_id = clientID;
+        //    HeadLogger(" client_id : " + clientID);
+        //}
+
+        function HeadLogger(str) {
+            if (false) {
+                console.log(str);
+            }
+        }
+
+        var urlParams = new URLSearchParams(window.location.search);
+        function JsGetUrlParamHead(paramName) {
+            var paramValue = urlParams.get(paramName);
+            return paramValue;
+        }
+        var sourceValue = JsGetUrlParamHead('from');
+        var pxidValue = JsGetUrlParamHead('pxid');
+        function hasLetter(str) {
+            return /[a-zA-Z]/.test(str);
+        }
+        if (sourceValue == null && pxidValue !== null) {
+            var boolISSoure = hasLetter(pxidValue);
+            if (boolISSoure) {
+                sourceValue = 'tiktok';
+            } else {
+                sourceValue = 'kwai';
+            }
+        }
+        if (sourceValue !== null) {
+            switch (sourceValue) {
+                case 'tiktok':
+                    !function (w, d, t) {
+                        w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
+                    }(window, document, 'ttq');
+                    ttq.load(pxidValue);
+                    ttq.page();
+                    break;
+                case 'kwai':
+                    !function (e, t) { "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.install = t() : e.install = t() }(window, (function () { return function (e) { var t = {}; function n(r) { if (t[r]) return t[r].exports; var o = t[r] = { i: r, l: !1, exports: {} }; return e[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports } return n.m = e, n.c = t, n.d = function (e, t, r) { n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r }) }, n.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, n.t = function (e, t) { if (1 & t && (e = n(e)), 8 & t) return e; if (4 & t && "object" == typeof e && e && e.__esModule) return e; var r = Object.create(null); if (n.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e) for (var o in e) n.d(r, o, function (t) { return e[t] }.bind(null, o)); return r }, n.n = function (e) { var t = e && e.__esModule ? function () { return e.default } : function () { return e }; return n.d(t, "a", t), t }, n.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, n.p = "", n(n.s = 0) }([function (e, t, n) { "use strict"; var r = this && this.__spreadArray || function (e, t, n) { if (n || 2 === arguments.length) for (var r, o = 0, i = t.length; o < i; o++)!r && o in t || (r || (r = Array.prototype.slice.call(t, 0, o)), r[o] = t[o]); return e.concat(r || Array.prototype.slice.call(t)) }; !function (e) { var t = window; t.KwaiAnalyticsObject = e, t[e] = t[e] || []; var n = t[e]; n.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"]; var o = function (e, t) { e[t] = function () { var n = Array.from(arguments), o = r([t], n, !0); e.push(o) } }; n.methods.forEach((function (e) { o(n, e) })), n.instance = function (e) { var t = n._i[e] || []; return n.methods.forEach((function (e) { o(t, e) })), t }, n.load = function (t, r) { n._i = n._i || {}, n._i[t] = [], n._i[t]._u = "https://s1.kwai.net/kos/s101/nlav11187/pixel/custom/events-nr.js", n._t = n._t || {}, n._t[t] = +new Date, n._o = n._o || {}, n._o[t] = r || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = "https://s1.kwai.net/kos/s101/nlav11187/pixel/custom/events-nr.js?sdkid=" + t + "&lib=" + e; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i) } }("kwaiq") }]) }));
+                    kwaiq.load(pxidValue);
+                    kwaiq.page();
+                    break;
+                case 'meta':
+                    HeadLogger('from : ' + sourceValue);
+                    break;
+                default:
+                    HeadLogger(sourceValue + 'pxid error');
+            }
+        } else {
+            HeadLogger('from error');
+        }
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JJJJ</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <!-- Preload the resource -->
+    <!--<link rel="preload" href="Build/WebGL.data.unityweb" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="Build/WebGL.framework.js.unityweb" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="Build/WebGL.loader.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="Build/WebGL.wasm.unityweb" as="fetch" crossorigin="anonymous">-->
+    <!--<link rel="preload" href="StreamingAssets/Assetbundles/WebGL/luabytes_dc2f33bb820b999b536274c46fdc4531.bundle" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="StreamingAssets/Assetbundles/WebGL/localprefab_38455e748008d845ad6516e3cb71fba9.bundle" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="StreamingAssets/Assetbundles/WebGL/slotcommon_d0456009a0b19b2423cfcb97a1ca8f59.bundle" as="fetch" crossorigin="anonymous">-->
+    <script>
+
+    </script>
+    <!-- diagnostics -->
+    <link rel="stylesheet" href="TemplateData/diagnostics.css">
+    <script src="TemplateData/diagnostics.js"></script>
+</head>
+<body>
+    <p id="display-text">GPU</p>
+    <p id="deviceRate-text">device rate</p>
+    <p id="fps-text">fps</p>
+    <p id="cpu-text">cpu</p>
+    <div id="unity-container" class="unity-desktop">
+        <div id="dialogSuporte" class="suporte-dialog-view"
+             onclick="onClickSuporteRight('suporteRight')">
+            <img class="suporte-dialog-view-img" src="./TemplateData/gn_Suporte1.png" alt="">
+        </div>
+        <div id="dialogSuportePhone" class="suporte-dialog-view-phone"
+             onclick="onClickSuporteRight('suporteRight')">
+            <img class="suporte-dialog-view-img-phone" src="./TemplateData/gn_Suporte1.png" alt="">
+        </div>
+        <div id="dialogCommon" class="common-dialog-view">
+            <div class="common-dialog">
+                <a>dicas</a>
+                <a id="dialogMsg" class="wrap-text"></a>
+                <div class="common-dialog-button-view">
+                    <button class="left-button" type="submit" onclick="closeDialog()">Fechar</button>
+                    <button class="right-button" type="submit" onclick="onClickRightButton()">Go</button>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="unity-canvas" width="1920" height="1080" tabindex="-1"></canvas>
+        <div id="unity-loading-bar">
+            <div id="connecting-text">CONNECTING...</div> <!-- 新增文本元素 -->
+            <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div id="network-text" style="display: none;">You're on the best network route available.</div> <!-- 新增文本 -->
+        </div>
+        <div id="unity-warning"></div>
+        <div id="unity-footer">
+            <!--<div id="unity-webgl-logo"></div>
+            <div id="unity-fullscreen-button"></div>-->
+            <!--<img id="diagnostics-icon" src="TemplateData/webmemd-icon.png">-->
+            <!--<div id="unity-build-title">Slots Lucky</div>-->
+        </div>
+    </div>
+    <!-- iframe元素 -->
+    <iframe id="embedded-iframe" class="iframe-style" style="display: none;">
+    </iframe>
+    <img id="img-home-iframe" onclick="onBackHome()" class="iframe-home-img" src="./TemplateData/ui_an_lobby1.png" />
+    <img id="img-home-iframe-phone" onclick="onBackHome()" class="iframe-home-img-phone" src="./TemplateData/ui_an_lobby1.png" />
+    <button id="id-back-home-on-error" class="btn-back-home-on-error" onclick="onBackHomeWhenError()" />
+
+    <script src="./TemplateData/deviceCtrl.js"></script>
+    <script>
+        var isDebug = false;
+        var hasBar = true;
+        var loadingBar;
+        var progressBarFull;
+        var container = document.querySelector("#unity-container");
+        var canvas = document.querySelector("#unity-canvas");
+        //var diagnostics_icon = document.getElementById("diagnostics-icon");
+        if (hasBar) {
+            loadingBar = document.querySelector("#unity-loading-bar");
+            progressBarFull = document.querySelector("#unity-progress-bar-full");
+            var connectingText = document.getElementById("connecting-text");
+            var networkText = document.getElementById("network-text");
+
+            connectingText.style.display = "none";
+            networkText.style.display = "none";
+        }
+        var embeddedIframe = document.getElementById('embedded-iframe');
+        var homeButton = document.querySelector('#img-home-iframe');
+        var homeButtonPhone = document.querySelector('#img-home-iframe-phone');
+
+        var showDialog = false;
+        var chatUrl = '';
+
+
+        Logger(" window.deviceId : " + window.deviceId);
+        //var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        //var warningBanner = document.querySelector("#unity-warning");
+
+        // Shows a temporary message banner/ribbon for a few seconds, or
+        // a permanent error message on top of the canvas if type=='error'.
+        // If type=='warning', a yellow highlight color is used.
+        // Modify or remove this function to customize the visually presented
+        // way that non-critical warnings and error messages are presented to the
+        // user.
+        function unityShowBanner(msg, type) {
+            function updateBannerVisibility() {
+                //warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+            }
+
+            var div = document.createElement('div');
+            div.innerHTML = msg;
+            //warningBanner.appendChild(div);
+            if (type == 'error') div.style = 'background: red; padding: 10px;';
+            else {
+                if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+                setTimeout(function () {
+                    //warningBanner.removeChild(div);
+                    updateBannerVisibility();
+                }, 5000);
+            }
+            updateBannerVisibility();
+        }
+
+        /**
+        * Check for ASTC and ETC2 support in WebGL or WebGL2
+        * @returns {string} The detected compression format ("ASTC", "ETC2", or "None")
+        */
+        function checkTextureCompressionSupport() {
+            const canvas = document.createElement("canvas");
+            const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+            const gl2 = canvas.getContext("webgl2");
+
+            if ((gl && gl.getExtension("WEBGL_compressed_texture_astc")) || (gl2 && gl2.getExtension("WEBGL_compressed_texture_astc"))) {
+                console.log("WEBGL_compressed_texture_astc supported");
+                return "ASTC";
+            } else if ((gl && gl.getExtension("WEBGL_compressed_texture_etc")) || (gl2 && gl2.getExtension("WEBGL_compressed_texture_etc"))) {
+                console.log("WEBGL_compressed_texture_etc supported");
+                return "ETC2";
+            } else {
+                console.log("No ASTC or ETC2 support");
+                return "None";
+            }
+        }
+
+        function isWebGL2Supported() {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl2');
+            return !!gl;
+        }
+
+        if (isWebGL2Supported()) {
+            Logger("WebGL2 is supported!");
+        } else {
+            Logger("WebGL2 is not supported!");
+        }
+
+        var buildUrl = "Build";
+        const version = "1.0.9";
+        var loaderUrl = buildUrl + "/WebGL.loader.js?v=" + version;
+        var config = {
+            dataUrl: buildUrl + "/WebGL.data.unityweb?v=" + version,
+            frameworkUrl: buildUrl + "/WebGL.framework.js.unityweb?v=" + version,
+            codeUrl: buildUrl + "/WebGL.wasm.unityweb?v=" + version,
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "xix.bet",
+            productName: "xix.bet",
+            productVersion: "6.0.3.4",
+            showBanner: unityShowBanner,
+        };
+
+        //if (!isWebGL2Supported()) {
+        //    buildUrl = "WebGL1/WebGL/Build";
+        //    loaderUrl = buildUrl + "/WebGL.loader.js?v=" + version;
+        //    config.dataUrl = buildUrl + "/WebGL.data.unityweb?v=" + version;
+        //    config.frameworkUrl = buildUrl + "/WebGL.framework.js.unityweb?v=" + version;
+        //    config.codeUrl = buildUrl + "/WebGL.wasm.unityweb?v=" + version;
+        //    config.streamingAssetsUrl = "WebGL1/WebGL/StreamingAssets";
+        //}
+
+        function getWebHtmlVersion() {
+            return version;
+        }
+
+        function getTargetDevicePixelRatio() {
+            if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                return 2;
+            }
+            var graphicName = getGraphicsName();
+            updateGPUText(graphicName);
+            let deviceLevel;
+            if (graphicName !== "Unknown") {
+                Logger("js getGraphicsName : " + graphicName);
+                deviceLevel = checkGpuPerformance(graphicName);
+                return { 1: 1.25, 2: 1.5, 3: 2 }[deviceLevel] || 1.5;
+            }
+            const cores = navigator.hardwareConcurrency || 4;
+            const memory = navigator.deviceMemory || 4;
+            if (cores >= 8 && memory >= 8) {
+                return 2;
+            } else if (cores >= 4 && memory >= 4) {
+                return 1.5;
+            } else {
+                return 1.25;
+            }
+        }
+
+        function getGraphicsName() {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            if (!gl) return "Unknown";
+
+            const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+            return debugInfo
+                ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL)
+                : "Unknown";
+        }
+
+        // By default Unity keeps WebGL canvas render target size matched with
+        // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+        // Set this to false if you want to decouple this synchronization from
+        // happening inside the engine, and you would instead like to size up
+        // the canvas DOM size and WebGL render target sizes yourself.
+        // config.matchWebGLToCanvasSize = false;
+
+        // 更新canvas尺寸的函数, 保持原本的比例（选择较小的比例）进行缩放
+        function updateCanvasSize() {
+            // 原始宽高
+            const originalWidth = 1920;
+            const originalHeight = 1080;
+            // 获取当前浏览器窗口宽高
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            // 计算宽高比例
+            const widthRatio = windowWidth / originalWidth;
+            const heightRatio = windowHeight / originalHeight;
+
+            // 选择较小的比例，以保持宽高比不变
+            const ratio = Math.min(widthRatio, heightRatio);
+
+            // 根据比例设置canvas的宽高
+            var setWidth = windowWidth;// originalWidth * ratio;
+            var setHeight = windowHeight; //originalHeight * ratio;
+            //if (setWidth < windowWidth) {
+            //    setWidth = windowWidth;
+            //}
+            canvas.style.width = setWidth + 'px';
+            canvas.style.height = setHeight + 'px';
+            //canvas.style.width = 1080 + 'px';
+            //canvas.style.height = 1920 + 'px';
+            Logger(` window size : mobile : windowWidth : ${windowWidth}  windowHeight : ${windowHeight}`);
+            Logger(` window size : mobile : widthRatio : ${widthRatio}  heightRatio : ${heightRatio} `);
+        }
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            //var meta = document.createElement('meta');
+            //meta.name = 'viewport';
+            //meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            //document.getElementsByTagName('head')[0].appendChild(meta);
+            //container.className = "unity-mobile";
+            // To lower canvas resolution on mobile devices to gain some
+            // performance, uncomment the following line:
+            //canvas.className = "unity-mobile";
+
+            Logger("this is mobile browser, tuanjie set meta config");
+
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
+            container.className = "unity-mobile";
+            canvas.className = "unity-mobile";
+            Logger(" devicePixelRatio : " + window.devicePixelRatio);
+            var tmpRate = getTargetDevicePixelRatio();
+            Logger(" getTargetDevicePixelRatio : " + tmpRate);
+            updateDeviceRateText(tmpRate);
+            config.devicePixelRatio = tmpRate;
+
+            //container.className = "unity-mobile";
+            //// To lower canvas resolution on mobile devices to gain some
+            //// performance, uncomment the following line:
+            //canvas.className = "unity-mobile";
+            //config.devicePixelRatio = 1;
+
+            //updateCanvasSize();
+            // Avoid draining fillrate performance on mobile devices,
+            // and default/override low DPI mode on mobile browsers.
+            //config.devicePixelRatio = 1;
+            //unityShowBanner('WebGL builds are not supported on mobile devices.');
+
+            // position the diagnostics icon in the corner on the canvas
+            //diagnostics_icon.style.position = "fixed";
+            //diagnostics_icon.style.bottom = "10px";
+            //diagnostics_icon.style.right = "0px";
+            //canvas.after(diagnostics_icon);
+        } else {
+            // 监听窗口尺寸变化事件
+            window.addEventListener('resize', updateCanvasSize);
+
+            // 初始调用以设置初始尺寸
+            updateCanvasSize();
+            //config.devicePixelRatio = 1;
+            //canvas.className = "unity-mobile";
+            //var width = window.innerWidth;
+            //var height = window.innerHeight;
+            //if (isMacOS()) {
+            //    canvas.style.width = width - 100 + "px";
+            //    canvas.style.height = height - 100 + "px";
+            //    config.devicePixelRatio = 0;
+            //}
+            //else {
+            //    canvas.style.width = width + "px";
+            //    canvas.style.height = height + "px";
+            //    config.devicePixelRatio = 0.7;
+            //}
+            //Logger("------ width : ");
+            //Logger("------ width : " + width.toString() + "  height :" + height.toString());
+        }
+        if (hasBar) {
+            loadingBar.style.display = "block";
+        }
+
+
+
+        if (window.firebaseLogEventIfReady) {
+            window.firebaseLogEventIfReady('game_start_load', {
+                loader_url: loaderUrl,
+            });
+            Logger(" game_start_load : " + loaderUrl);
+        }
+
+        var script = document.createElement("script");
+        var gameInstance = null;
+        var curUnityInstance = null;
+        script.src = loaderUrl;
+        script.onload = () => {
+            gameInstance = createTuanjieInstance(canvas, config, (progress) => {
+                if (hasBar) {
+                    const progressBarFull = document.getElementById("unity-progress-bar-full");
+                    progress = progress * 100;
+                    progressBarFull.style.width = `${progress}%`;
+                    Logger("loadingBar : " + window.getComputedStyle(loadingBar).width);
+                    Logger("progressBarFull : " + progressBarFull.style.width + "  " + progress);
+                    // 根据进度动态改变颜色，从 #FDF241 到 #00FF00 (绿色)
+                    if (progress < 100) {
+                        // 计算 RGB 的绿色值，使颜色从 #FDF241 (近黄色) 过渡到 #00FF00 (绿色)
+                        const redValue = Math.floor(253 - (253 * (progress / 100)));
+                        const greenValue = Math.floor(241 + (255 - 241) * (progress / 100));
+                        const blueValue = Math.floor(65 * (1 - (progress / 100)));
+
+                        progressBarFull.style.backgroundColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+                    } else {
+                        // 完全加载后显示为绿色
+                        progressBarFull.style.backgroundColor = "green";
+                    }
+
+                    //progressBarFull.style.width = 100 * progress + "%";
+                    if (progress === 100) {
+                        // 进度条加载完成后
+                        //connectingText.textContent = "CONNECTED SUCCESSFULLY";
+                        //connectingText.style.color = "#65CBA0";
+                        //progressBarFull.style.backgroundColor = "#65CBA0";
+                        //networkText.style.display = "block";
+
+                        setTimeout(() => {
+                            loadingBar.style.display = "none";
+                            connectingText.style.display = "none";
+                            progressBarFull.style.display = "none";
+                            networkText.style.display = "none";
+                        }, 500); // 延迟100毫秒
+                    }
+                }
+            });
+            gameInstance.then((unityInstance) => {
+                curUnityInstance = unityInstance;
+                if (window.firebaseLogEventIfReady) {
+                    window.firebaseLogEventIfReady('game_start_load_over', {
+                        loader_url: loaderUrl,
+                    });
+                }
+
+                //reject("Forced game load error"); // test 强制抛出错误
+                //diagnostics_icon.onclick = () => {
+                //    unityDiagnostics.openDiagnosticsDiv(unityInstance.GetMemoryInfo);
+                //};
+                //fullscreenButton.onclick = () => {
+                //    unityInstance.SetFullscreen(1);
+                //};
+            }).catch((message) => {
+                if (window.firebaseLogEventIfReady) {
+                    Logger("Game failed to load: send msg");
+
+                    window.firebaseLogEventIfReady('game_load_error', {
+                        loader_url: loaderUrl,
+                        message: message,
+                    });
+                }
+
+                if (window.logJsError !== undefined && window.logJsError !== null) {
+                    const safeError = {
+                        message: message instanceof Error ? message.message : String(message),
+                        stack: message instanceof Error ? message.stack : "No stack trace",
+                    };
+                    window.logJsError(safeError, "game_load_error");
+                    Logger("Game failed, logJsError function dont is null");
+                } else {
+                    Logger("Game failed, logJsError function is null");
+                }
+
+                Logger("Game failed to load:1", message);
+                //document.getElementById("error-message").innerText = "O jogo falhou ao carregar: Por favor, tente novamente ou entre em contato com o atendimento ao cliente."; //游戏加载失败：请重试，或联系客服。
+                //document.getElementById("error-message").style.display = "block";
+                //alert(message);
+                alert("O jogo falhou ao carregar: Por favor, tente novamente ou entre em contato com o atendimento ao cliente.");
+            });
+        };
+        document.body.appendChild(script);
+
+        //addEventListener
+        window.addEventListener("orientationchange", function () {
+            var orientation = window.orientation;
+            if (orientation === 0 || orientation === 180) {
+                // Portrait mode
+                Logger("Switched to portrait mode.");
+                // when portrait mode to hide navbar
+                document.documentElement.style.overflow = 'auto';
+                gameInstance.then((unityInstance) => {
+                    unityInstance.SendMessage("UnityJsBridge", "JsToUnityOrientationChange", "Portrait");
+                });
+            } else {
+                // Landscape mode
+                Logger("Switched to landscape mode.");
+                // the iOS Safari when landscape mode need show navbar
+                //window.scrollTo(0, 1);
+                var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                if (isSafari) {
+                    document.documentElement.style.overflow = 'auto';
+                    window.scrollTo(0, 0);
+                    Logger("Switched to landscape mode. isSafari ");
+                }
+                gameInstance.then((unityInstance) => {
+                    unityInstance.SendMessage("UnityJsBridge", "JsToUnityOrientationChange", "Landscape");
+                });
+            }
+        });
+
+        //@Override
+        //protected void onPause() {
+        //    super.onPause();
+        //    // 通知 WebView 页面进入后台
+        //    myWebView.evaluateJavascript("document.dispatchEvent(new Event('appPause'));", null);
+        //}
+
+        //@Override
+        //protected void onResume() {
+        //    super.onResume();
+        //    // 通知 WebView 页面进入前台
+        //    myWebView.evaluateJavascript("document.dispatchEvent(new Event('appResume'));", null);
+        //}
+
+        document.addEventListener("appPause", function () {
+            unityInstance.SendMessage("GameMain", "OnApplicationFocus", "false");
+        });
+
+        document.addEventListener("appResume", function () {
+            unityInstance.SendMessage("GameMain", "OnApplicationFocus", "true");
+        });
+
+        function isWebView() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Android WebView detection
+            const isAndroidWebView = /\bwv\b|Android.*Version\/[\d.]+/.test(ua);
+
+            // iOS WebView detection
+            const isIosWebView = /iP(hone|ad|od).*AppleWebKit(?!.*Safari)/.test(ua);
+
+            return isAndroidWebView || isIosWebView;
+        }
+
+        function isAndroidWebView() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            return /\bwv\b|Android.*Version\/[\d.]+/.test(ua);
+        }
+
+
+        function IsSafari() {
+            return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        }
+
+        function isMacOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            return userAgent.indexOf('Mac') !== -1;
+        }
+
+        function getDevicePlatform() {
+            if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                return "iOS";
+            }
+            else if (/Android/i.test(navigator.userAgent)) {
+                return "Android";
+            }
+            else {
+                return "PC";
+            }
+        }
+
+        if (isWebView()) {
+            document.addEventListener("appPause", function () {
+                gameInstance.then((unityInstance) => {
+                    Logger("isWebView appPause " + "UnityJsBridge " + " OnApplicationFocus " + " false");
+                    unityInstance.SendMessage("UnityJsBridge", "OnApplicationFocus", "false");
+                });
+            });
+
+            document.addEventListener("appResume", function () {
+                gameInstance.then((unityInstance) => {
+                    Logger("isWebView appResume " + "UnityJsBridge " + " OnApplicationFocus " + " true");
+                    unityInstance.SendMessage("UnityJsBridge", "OnApplicationFocus", "true");
+                });
+            });
+        }
+        else {
+
+            //document.addEventListener("visibilitychange", function () {
+            //    const isVisible = document.visibilityState === "visible";
+            //    if (isVisible) {
+            //        Logger("页面显示");
+            //        gameInstance.then((unityInstance) => {
+            //            Logger(" appResume " + "UnityJsBridge " + " OnApplicationPause " + " false");
+            //            unityInstance.SendMessage("UnityJsBridge", "OnApplicationPause", "false");
+            //        });
+            //    } else {
+            //        Logger("页面隐藏");
+            //        gameInstance.then((unityInstance) => {
+            //            Logger(" appPause " + "UnityJsBridge " + " OnApplicationPause " + " true");
+            //            unityInstance.SendMessage("UnityJsBridge", "OnApplicationPause", "true");
+            //        });
+
+            //    }
+            //});
+
+            //window.onfocus = function () {
+            //    gameInstance.then((unityInstance) => {
+            //        Logger(" 窗口获得焦点 " + "UnityJsBridge " + " OnApplicationFocus " + " true");
+            //        unityInstance.SendMessage("UnityJsBridge", "OnApplicationFocus", "true");
+            //    });
+            //};
+
+            //window.onblur = function () {
+            //    gameInstance.then((unityInstance) => {
+            //        Logger(" 窗口失去焦点 " + "UnityJsBridge " + " OnApplicationFocus " + " false");
+            //        unityInstance.SendMessage("UnityJsBridge", "OnApplicationFocus", "false");
+            //    });
+            //};
+
+            window.onfocus = checkFocusAndVisibility;
+            window.onblur = checkFocusAndVisibility;
+            document.addEventListener("visibilitychange", checkFocusAndVisibility);
+        }
+
+        function checkFocusAndVisibility() {
+            if (document.visibilityState === "visible" && document.hasFocus()) {
+                gameInstance.then((unityInstance) => {
+                    Logger(" checkFocusAndVisibility " + "UnityJsBridge " + " OnApplicationFocus " + " true");
+                    unityInstance.SendMessage("UnityJsBridge", "OnApplicationFocus", "true");
+                });
+            } else {
+                gameInstance.then((unityInstance) => {
+                    Logger(" checkFocusAndVisibility " + "UnityJsBridge " + " OnApplicationFocus " + " false");
+                    unityInstance.SendMessage("UnityJsBridge", "OnApplicationFocus", "false");
+                });
+            }
+        }
+
+        Logger("isWebView :" + isWebView().toString());
+
+        let urlParametersAsJson = null;
+        // 当页面加载时，获取并显示URL参数
+        window.onload = function () {
+            urlParametersAsJson = getUrlParametersAsJson();
+            //Logger(jsonParams99); // 在控制台打印参数JSON字符串
+            //document.getElementById("params").textContent = jsonParams;
+        }
+
+        function useUrlJsonParameters() {
+            Logger(" useUrlJsonParameters : " + urlParametersAsJson);
+            return urlParametersAsJson;
+        }
+
+        function JsGetUrlParam(paramName) {
+            // 直接从 window.location.search 获取原始查询字符串
+            const queryString = window.location.search;
+
+            // 构造正则表达式匹配指定参数，并且不进行解码
+            const regex = new RegExp(`[?&]${paramName}=([^&]*)`);
+            const match = queryString.match(regex);
+
+            if (match) {
+                const originalValue = match[1]; // 匹配到的值仍然是编码状态
+                return decodeURIComponent(originalValue); // 手动解码并返回
+            }
+
+            // 没有匹配到参数则返回 null
+            return null;
+        }
+
+        // 函数：获取URL中的所有参数并转换为JSON字符串
+        function getUrlParametersAsJson() {
+            // 获取查询字符串
+            const queryString = window.location.search;
+            // 创建 URLSearchParams 对象
+            const urlParams = new URLSearchParams(queryString);
+            // 用于存储参数的对象
+            const params = {};
+
+            // 遍历所有参数并存储到对象中
+            for (const [key, value] of urlParams.entries()) {
+                params[key] = value;
+            }
+
+            // 将对象转换为JSON字符串
+            return JSON.stringify(params);
+        }
+
+        function GetPlatformType() {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                return "MobileWeb";
+            } else {
+                Logger("this is PC device");
+                return "PCWeb";
+            }
+        }
+
+        GetPlatformType();
+
+        function CheckOrientation() {
+            var orientation = window.orientation;
+            if (orientation === 0 || orientation === 180) {
+                Logger("Device current mode is Portrait");
+                return "Portrait";
+            } else if (orientation === 90 || orientation === -90) {
+                return "Landscape";
+            } else {
+                return "Null";
+            }
+        }
+
+        //check screen orientation, if no to lock landscape
+        function JsSetOrientationLandscape() {
+            var isSafari = IsSafari();
+            Logger("isSafari" + isSafari.toString());
+            if (!isSafari) {
+                var element = document.documentElement;
+                if (element.requestFullscreen) {
+                    Logger("element.requestFullscreen ");
+                    element.requestFullscreen();
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                    Logger("element.webkitRequestFullscreen ");
+
+                } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                    Logger("element.mozRequestFullScreen ");
+
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                    Logger("element.msRequestFullscreen ");
+
+                }
+                // Android need to hide navbar
+                if (!window.screen.orientation.locked) {
+                    window.screen.orientation.lock('landscape');
+                }
+            }
+        }
+
+        //cancel lock
+        function JsCancelOrientationLandscape() {
+            if (document.fullscreenElement !== null) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            }
+            // unlock
+            if (window.screen.orientation && window.screen.orientation.locked) {
+                window.screen.orientation.unlock();
+            }
+            // show navbar
+            document.documentElement.style.overflow = 'auto';
+        }
+
+        function Logger(str, message) {
+            if (isDebug && str !== undefined && str !== null) {
+                if (message !== undefined && message !== null) {
+                    console.log(str, message);
+                } else {
+                    console.log(str);
+                }
+            }
+        }
+
+        // custom error tips
+        function CustomErrorHandler(msg, url, line, col, error) {
+            Logger("Error:", msg, "at", url, "line:", line, "col:", col, "error:", error);
+            return true;
+        }
+
+        window.onerror = CustomErrorHandler;
+
+        function WindowOpenURL(url) {
+            Logger("WindowOpenURL" + url);
+            // if (IsSafari()) {
+            //     const a = document.createElement('a');
+            //     a.href = url;
+            //     document.body.appendChild(a);
+            //     a.click();
+            //     document.body.removeChild(a);
+            //     return;
+            // }
+            const newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                // 如果 newWindow 为空，或者被关闭，或者未定义，则说明被浏览器阻止了
+                return false;
+
+            } else {
+                // 如果能够成功打开新窗口，则 newWindow 将指向新窗口的 window 对象
+                return true;
+            }
+        }
+
+
+        let dialogType = '';
+        let dialogMsg = '';
+        let dialogUrl = '';
+
+        //account login customer
+        function showTopRightDialog() {
+            dialogType = 'suporteRight';
+            dialogUrl = "https://chat.ichatlink.net/widget/standalone.html?eid=a990f3f0bedb29ab26127c1e82b1b06b&groupid=5db65f095143a21cf0aa9e4fee865521&language=pt";
+            let dialogSuporte = document.querySelector('#dialogSuporte');
+            let dialogSuportePhone = document.querySelector('#dialogSuportePhone');
+            setScale()
+            if (config.devicePixelRatio == 1) {
+                dialogSuportePhone.setAttribute('style', 'display:flex')
+            } else {
+                dialogSuporte.setAttribute('style', 'display:flex')
+            }
+        }
+
+        // 截取前60个字符
+        function truncateString(str, num) {
+            if (str.length > num) {
+                return str.slice(0, num) + '...';
+            } else {
+                return str;
+            }
+        }
+
+        function openDialogIfRequestBlocked(type, msg) {
+            let dialogCommon = document.querySelector('#dialogCommon');
+            let dialogMsgA = document.querySelector('#dialogMsg');
+            let rightButton = document.querySelector('.right-button');
+
+            switch (type) {
+                case 'pay':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = msg;
+                    rightButton.innerHTML = 'Pagamento';
+                    break;
+                case 'copy':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = truncateString(msg, 60);//msg;
+                    rightButton.innerHTML = 'cópia';
+                    break;
+                case 'paste':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = msg;
+                    rightButton.innerHTML = 'colar';
+                    break;
+                case 'suporte':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = msg;
+                    rightButton.innerHTML = 'Suporte';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function openDialog(type, msg, url) {
+            dialogType = type;
+            dialogMsg = msg;
+            dialogUrl = url;
+            setScale()
+            if (IsSafari()) { //***
+                openDialogIfRequestBlocked(type, msg);
+            } else {
+                if (type == 'suporte' || type == 'suporteRight' || type == 'pay') {
+                    //window.open(url, '_blank');
+                    var isSuccess = WindowOpenURL(url);
+                    if (!isSuccess) {
+                        openDialogIfRequestBlocked(type, msg);
+                    }
+                } else if (type == 'copy') {
+                    copyTextToClipboard(msg, function () {
+                        openDialogIfRequestBlocked(type, msg);
+                    });
+                    //Toast('Copiado com sucesso!')
+                } else if (type == 'paste') {
+                    pasteTextFromClipboard(msg);
+                }
+            }
+        }
+
+        //set screen scale, mobile: 2、pc: 1
+        function setScale() {
+            if (config.devicePixelRatio == 1) {
+                let element = document.querySelector(".common-dialog");
+                // Get CSS variables on any Dom node
+                element.style.getPropertyValue("--scale");
+                getComputedStyle(element).getPropertyValue("--scale");
+                element.style.setProperty("--scale", 2.4);
+                element.style.setProperty("--suporte-dialog-view-right", 10);
+            }
+        }
+
+        function closeDialog() {
+            let dialogCommon = document.querySelector('#dialogCommon');
+            let dialogSuporte = document.querySelector('#dialogSuporte');
+            let dialogSuportePhone = document.querySelector('#dialogSuportePhone');
+
+            if (dialogType == 'suporte') {
+                dialogCommon.setAttribute('style', 'display:none')
+            } else if (dialogType == 'suporteRight') {
+                dialogSuporte.setAttribute('style', 'display:none')
+                dialogSuportePhone.setAttribute('style', 'display:none')
+            } else if (dialogType == 'pay') {
+                dialogCommon.setAttribute('style', 'display:none')
+            } else if (dialogType == 'copy' || dialogType == 'paste') {
+                dialogCommon.setAttribute('style', 'display:none')
+            } else {
+                dialogCommon.setAttribute('style', 'display:none')
+            }
+            dialogType = '';
+            dialogMsg = '';
+            dialogUrl = '';
+        }
+
+        // close login customer
+        function onClickSuporteRight(type) {
+
+            if (type == 'suporteRight') {
+                window.open(dialogUrl, '_blank')
+            }
+        }
+        // close iframe click
+        function onBackHome(type) {
+            let embeddedIframe = document.querySelector('#embedded-iframe');
+            homeButton.setAttribute('style', 'display:none')
+            homeButtonPhone.setAttribute('style', 'display:none')
+            embeddedIframe.setAttribute('style', 'display:none')
+            closeIframe();
+        }
+
+        //dialog button event
+        function onClickRightButton(type) {
+            switch (dialogType) {
+                case 'pay':
+                    window.open(dialogUrl, '_blank')
+                    break;
+                case 'copy':
+                    copyTextToClipboard(dialogMsg)
+                    //Toast('Copiado com sucesso!')
+                    break;
+                case 'paste':
+                    pasteTextFromClipboard(dialogMsg)
+                    break;
+                case 'suporte':
+                    window.open(dialogUrl, '_blank')
+                    break;
+                default:
+                    break;
+            }
+
+            closeDialog()
+        }
+
+        function Toast(msg, duration) {
+            duration = isNaN(duration) ? 3000 : duration;
+            var m = document.createElement('div');
+            m.innerHTML = msg;
+            //config.devicePixelRatio == 1 is mobile ，，，otherwise is pc
+            if (config.devicePixelRatio == 1) m.style.cssText = "max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999999999;background: rgba(0, 0, 0,.7);font-size: 32px;";
+            if (config.devicePixelRatio != 1) m.style.cssText = "max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+            document.body.appendChild(m);
+            setTimeout(function () {
+                var d = 0.5;
+                m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+                m.style.opacity = '0';
+                setTimeout(function () {
+                    document.body.removeChild(m)
+                }, d * 1000);
+            }, duration);
+        }
+
+
+        function copyTextToClipboard(text, errorCallback) {
+            console.log('copyTextToClipboard------', text)
+            if (!navigator.clipboard) {
+                Logger("browser not support clipboard copy API");
+
+                var tempInput = document.createElement("input");
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                Logger("browser use another Copy API");
+
+                // 在备用方法执行后，尝试读取剪贴板内容判断是否复制成功
+                var clipboardContent = document.createElement("textarea");
+                document.body.appendChild(clipboardContent);
+                clipboardContent.focus();
+                document.execCommand("paste");
+                var clipboardText = clipboardContent.value;
+                document.body.removeChild(clipboardContent);
+
+                if (clipboardText === text) {
+                    console.log("Text successfully copied using another Copy API");
+                } else {
+                    if (errorCallback != null) {
+                        errorCallback();
+                    }
+                    console.log("Text copy using another Copy API was unsuccessful");
+                }
+                return;
+            }
+
+            navigator.clipboard.writeText(text).then(function () {
+                Logger("text successful copy to clipboard");
+            }).catch(function (err) {
+                if (errorCallback != null) {
+                    errorCallback();
+                }
+                Logger("text unsuccessful copy to clipboard", err);
+            });
+        }
+
+        function pasteTextFromClipboard() {
+            Logger("browser not support clipboard paste API");
+            var tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.focus();
+            document.execCommand("paste");
+            var pastedText = tempInput.value;
+            document.body.removeChild(tempInput);
+            Logger("browser use another Paste API : " + pastedText);
+            return pastedText;
+        }
+
+        //--- Controller iframe slots
+        // hide UnityInstance
+        function hideUnityInstance() {
+            container.style.display = 'none';
+        }
+
+        // show UnityInstance
+        function showUnityInstance() {
+            container.style.display = 'block';
+        }
+
+        // load iframe
+        function loadIframeWithParams(url) {
+            hideUnityInstance();
+            //embeddedIframe.src = 'about:blank';
+            //embeddedIframe.src = url;
+            //embeddedIframe.style.display = 'block';
+            let iframe = document.createElement('iframe');
+            iframe.src = url;
+            iframe.id = 'myIframe';
+            iframe.width = '100%';
+            iframe.style.border = 'none'; // 可选：移除iframe边框
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.height = `${window.innerHeight}px`; // 设置初始高度为窗口高度
+            // 添加监听器以在窗口大小变化时调整iframe高度
+            window.addEventListener('resize', function () { iframe.style.height = `${window.innerHeight}px`; });
+            document.body.appendChild(iframe);
+
+            if (config.devicePixelRatio == 1) {
+                homeButtonPhone.style.display = 'block';
+            } else {
+                homeButton.style.display = 'block';
+            }
+        }
+        // close iframe and show UnityInstance
+        function closeIframe() {
+            //embeddedIframe.style.display = 'none';
+            destroyIframe('myIframe')
+            //setTimeout(function () {
+            //    //embeddedIframe.src = 'https://huidu.bet/game/gamesUrl?id=00';
+            //}, 2000); // Delay in milliseconds (e.g., 2000 ms = 2 seconds)
+            homeButtonPhone.style.display = 'none';
+            homeButton.style.display = 'none';
+            showUnityInstance();
+            gameInstance.then((unityInstance) => {
+                unityInstance.SendMessage("UnityJsBridge", "RefreshLuaBalance", "Refresh");
+            });
+        }
+
+
+        function destroyIframe(iframeId) {
+            let iframe = document.getElementById(iframeId);
+            if (iframe) {
+                // clear src res
+                iframe.src = 'javascript:void(0)';
+                // 从DOM中移除iframe
+                iframe.parentNode.removeChild(iframe);
+            }
+        }
+        function showHomeButton(url) {
+
+        }
+        function closeHomeButton(url) {
+
+        }
+        // --- send event func
+        function tikTokPixelSendEvent(Key) {
+            if (sourceValue == 'tiktok' && pxidValue !== null && ttq !== null) {
+                ttq.track(Key)
+            }
+            Logger("text sendEvent Key: " + Key);
+        }
+
+        function tikTokPixelSendDicEvent(Key, Contents) {
+            if (sourceValue == 'tiktok' && pxidValue !== null && ttq !== null) {
+                ttq.track(Key, Contents)
+            }
+            Logger("text sendDicEvent Key: " + Key);
+            Logger("text sendDicEvent Contents: ", Contents);
+        }
+        function kwaiPixelSendEvent(Key) {
+            if (sourceValue == 'kwai' && pxidValue !== null && kwaiq !== null) {
+                kwaiq.instance(pxidValue).track(Key)
+            }
+            Logger("text sendEvent Key: " + Key);
+        }
+
+        function kwaiPixelSendDicEvent(Key, Contents) {
+            if (sourceValue == 'kwai' && pxidValue !== null && kwaiq !== null) {
+                kwaiq.instance(pxidValue).track(Key, Contents)
+            }
+            Logger("text sendDicEvent Key: " + Key);
+            Logger("text sendDicEvent Contents: " + Contents);
+        }
+
+        let homeUrl = null;
+        // request home url, destroy self
+        function onBackHomeWhenError() {
+            gameInstance.then((unityInstance) => {
+                Logger("js onBackHomeWhenError " + "UnityJsBridge " + " CloseErrorPopupCallback " + " true");
+                unityInstance.SendMessage("UnityJsBridge", "CloseErrorPopupCallback", "true");
+            });
+            document.getElementById("id-back-home-on-error").style.display = "none";
+            if (homeUrl !== null) {
+                window.location.href = homeUrl;
+            }
+        }
+
+        function setHomeUrl(url) {
+            homeUrl = url;
+        }
+        function activeFullScreenBackHomeBtn() {
+            document.getElementById("id-back-home-on-error").style.display = "block";
+        }
+
+        // debug
+        function updateGPUText(content) {
+            if (isDebug) {
+                document.getElementById("display-text").innerText = content;
+            }
+        }
+        function updateDeviceRateText(content) {
+            if (isDebug) {
+                document.getElementById("deviceRate-text").innerText = content;
+            }
+        }
+        function updateFPSText(content) {
+            if (isDebug) {
+                //document.getElementById("fps-text").innerText = content;
+                const cores = navigator.hardwareConcurrency || "coresUnknow";
+                const memory = navigator.deviceMemory || "memoryUnknow";
+                document.getElementById("cpu-text").innerText = cores + " " + memory;
+            }
+        }
+        if (isDebug) {
+            updateFPSText();
+        }
+        else {
+            document.getElementById("display-text").style.display = "none";
+            document.getElementById("deviceRate-text").style.display = "none";
+            document.getElementById("fps-text").style.display = "none";
+            document.getElementById("cpu-text").style.display = "none";
+        }
+        function getTargetFrameRate() {
+            if (!isDebug) {
+                return 0;
+            }
+            return 0;
+        }
+
+
+        // clear game resource
+        //chrome run this, safari maybe run this;
+        window.addEventListener('unload', function () {
+            Logger("unload");
+            releaseUnityWebGLResources();
+        });
+
+        // safari run this function
+        window.addEventListener("pagehide", function (event) {
+            Logger("Page is closing in Safari");
+            if (gameInstance && gameInstance.then) {
+                Logger('gameInstance is a Promise, proceeding with then.');
+                if (curUnityInstance !== null) {
+                    curUnityInstance.SendMessage("UnityJsBridge", "JsToUnityOrientationChange", "clearScene");
+                }
+
+                gameInstance.then((unityInstance) => {
+                    Logger('Promise resolved with unityInstance:', unityInstance);
+                    // 检查 unityInstance 是否为空
+                    if (!unityInstance) {
+                        Logger('unityInstance is null or undefined.');
+                        return;
+                    }
+                    unityInstance.SendMessage("UnityJsBridge", "JsToUnityOrientationChange", "clearScene");
+                });
+            }
+
+            releaseUnityWebGLResources();
+        });
+
+        //chrome run this
+        window.addEventListener('beforeunload', function (e) {
+            // 提前释放 Unity WebGL 资源
+            Logger("beforeunload");
+            if (gameInstance && gameInstance.then) {
+                Logger('gameInstance is a Promise, proceeding with then.');
+
+                gameInstance.then((unityInstance) => {
+                    Logger('Promise resolved with unityInstance:', unityInstance);
+                    // 检查 unityInstance 是否为空
+                    if (!unityInstance) {
+                        Logger('unityInstance is null or undefined.');
+                        return;
+                    }
+                    unityInstance.SendMessage("UnityJsBridge", "JsToUnityOrientationChange", "clearScene");
+                });
+            }
+
+            // 如果需要阻止页面关闭（可选）
+            // e.preventDefault();
+            // e.returnValue = ''; // 部分浏览器需要返回一个字符串才能弹出确认框
+        });
+
+
+        function clearUnityInstance() {
+
+            if (gameInstance && gameInstance.then) {
+                Logger('gameInstance is a Promise, proceeding with then.');
+
+                try {
+                    var unityInstance = curUnityInstance;
+                    Logger('Promise resolved with unityInstance:', unityInstance);
+                    // 检查 unityInstance 是否为空
+                    if (!unityInstance) {
+                        Logger('unityInstance is null or undefined.');
+                        return;
+                    }
+
+                    function clearUnityInstanceAfterLuaClear() {
+                        if (unityInstance.QuitCleanup) {
+                            unityInstance.QuitCleanup(() => {
+                                Logger('Unity WebGL instance quit cleanup successfully.');
+                            });
+                        } else {
+                            Logger('QuitCleanup method not found.');
+                        }
+
+                        if (unityInstance.Quit) {
+                            unityInstance.Quit(() => {
+                                Logger('Unity WebGL instance quit successfully.');
+                            });
+
+                            try {
+                                unityInstance.Quit(() => {
+                                    Logger('Unity WebGL instance quit successfully.');
+                                });
+                            } catch (error) {
+                                Logger('Error while calling Quit:', error);
+                            }
+                            Logger('Quit method called, waiting for cleanup...');
+                        } else {
+                            Logger('Quit method not found.');
+                        }
+
+                        if (unityInstance.Module) {
+                            Logger('Unity WebGL instance Module exists.');
+
+                            if (typeof unityInstance.Module._malloc === 'function' && typeof unityInstance.Module._free === 'function') {
+                                unityInstance.Module._free(unityInstance.Module._malloc(0));
+                                Logger('Memory cleaned up successfully.');
+                            } else {
+                                Logger('Memory functions (_malloc/_free) not found.');
+                            }
+                        } else {
+                            Logger('Module not found in unityInstance.');
+                        }
+                    }
+                    clearUnityInstanceAfterLuaClear();
+                } catch (e) {
+                    Logger('Error initializing Unity WebGL instance:', error);
+                }
+
+                //gameInstance.then((unityInstance) => {
+
+                //}).catch((error) => {
+                //});
+            } else {
+                Logger('gameInstance is instance over, try clear ');
+
+                // 如果 gameInstance 已经是初始化好的实例，则直接调用
+                if (gameInstance.QuitCleanup) {
+                    gameInstance.QuitCleanup(() => {
+                        Logger('Unity WebGL instance quit cleanup successfully. - gameInstance');
+                    });
+                } else {
+                    Logger('QuitCleanup method not found.');
+                }
+
+                if (gameInstance.Quit) {
+                    gameInstance.Quit(() => {
+                        Logger('Unity WebGL instance quit successfully. - gameInstance');
+                    });
+                } else {
+                    Logger('Quit method not found.');
+                }
+
+                if (gameInstance.Module) {
+                    Logger('Unity WebGL instance quit Module successfully. - gameInstance');
+                    gameInstance.Module._free(gameInstance.Module._malloc(0)); // 强制清理内存
+                } else {
+                    Logger('Module method not found.');
+                }
+            }
+
+        }
+
+        function releaseUnityWebGLResources() {
+            try {
+                function clearUnityCanvas() {
+                    // 获取 WebGL 上下文并释放它
+                    const canvas = document.getElementById('unityCanvas');
+                    if (canvas) {
+                        const gl = canvas.getContext('webgl') || canvas.getContext('webgl2');
+                        if (gl) {
+                            const loseContextExt = gl.getExtension('WEBGL_lose_context');
+                            if (loseContextExt) {
+                                loseContextExt.loseContext(); // 释放 WebGL 上下文
+                                Logger('WebGL context lost.');
+                            } else {
+                                Logger('WEBGL_lose_context extension not supported.');
+                            }
+                        }
+                    }
+
+                    // 移除 Unity Canvas 和相关的 DOM 元素
+                    const unity_canvas = document.querySelector("#unity-canvas");
+                    if (unity_canvas) {
+                        // 移除 WebGL 上下文
+                        const gl = unity_canvas.getContext('webgl') || unity_canvas.getContext('webgl2');
+                        if (gl) {
+                            const loseContextExt = gl.getExtension('WEBGL_lose_context');
+                            if (loseContextExt) {
+                                loseContextExt.loseContext(); // 释放 WebGL 上下文
+                                Logger('WebGL context lost.');
+                            } else {
+                                Logger('WEBGL_lose_context extension not supported.');
+                            }
+                        }
+                        // 移除 canvas 元素
+                        unity_canvas.remove();
+                        Logger('Unity WebGL unity_canvas removed.');
+                    }
+                    Logger('Unity WebGL resources released successfully.');
+                }
+
+                Logger('Start Releasing Unity WebGL resources...');
+                clearUnityInstance();
+                clearUnityCanvas();
+            } catch (error) {
+                Logger('Error while releasing Unity WebGL resources:', error);
+            }
+        }
+    </script>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>-->
+    <script type="module">
+        var isFirebaseDebug = false;
+
+        function firebaseLogger(log) {
+            if (isFirebaseDebug) {
+                console.log("[ firebase ] : " + log);
+            }
+        }
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getAnalytics, logEvent, setUserId } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+        import { getFirestore, collection, addDoc, initializeFirestore } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
+
+        const firebaseReleaseConfig = {
+            apiKey: "AIzaSyBtFK0H4dHMBmAZs-uNw5gOy2u5vAAAyzc",
+            authDomain: "jjjj-bet-release.firebaseapp.com",
+            projectId: "jjjj-bet-release",
+            storageBucket: "jjjj-bet-release.firebasestorage.app",
+            messagingSenderId: "255515405838",
+            appId: "1:255515405838:web:5b36766fd2b3565c25d65f",
+            measurementId: "G-22K4LHK47B"
+        };
+
+        const firebaseDevelopConfig = {
+            apiKey: "AIzaSyBZSjV7z053pgknmqy1qU8maIPsTYvFfNs",
+            authDomain: "jjjj-bet-dev.firebaseapp.com",
+            databaseURL: "https://jjjj-bet-dev-default-rtdb.firebaseio.com",
+            projectId: "jjjj-bet-dev",
+            storageBucket: "jjjj-bet-dev.firebasestorage.app",
+            messagingSenderId: "584366137376",
+            appId: "1:584366137376:web:51198d73df0ffee95e1c45",
+            measurementId: "G-5MY3BH1TZX"
+        };
+
+        function checkURLForFields() {
+            const url = window.location.href;
+            const fields = ["localhost", "127.0.0.1", "192.168", "dtbbfsofi17yg"];
+            for (const field of fields) {
+                if (url.includes(field)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // get deviceId
+        const deviceId = localStorage.getItem('deviceId') || generateDeviceId();
+        window.deviceId = deviceId
+
+        // Initialize Firebase
+        let analytics = null;
+        let app;
+        let db;
+        // Log event after initialization
+        let firebaseConfig;
+        if (checkURLForFields()) {
+            firebaseConfig = firebaseDevelopConfig;
+            firebaseLogger("The URL contains one of the specified fields.");
+        } else {
+            firebaseConfig = firebaseReleaseConfig;
+            firebaseLogger("The URL does not contain any of the specified fields.");
+        }
+
+
+        app = initializeApp(firebaseConfig);
+        analytics = getAnalytics(app);
+        db = initializeFirestore(app, {
+            experimentalForceLongPolling: true // 使用 HTTP 请求替代 WebChannel
+        });
+
+        if (analytics) {
+            logEvent(analytics, 'game_start', {
+                content_type: '1',
+                deviceId: deviceId.toString(),
+            });
+        }
+
+
+        firebaseLogger(" game_start ");
+
+        // Convert Json String
+        function convertJsonString(jsonString) {
+            // Convert Json To Object
+            const jsonObject = JSON.parse(jsonString);
+            const convertedObject = {};
+            for (const key in jsonObject) {
+                if (jsonObject.hasOwnProperty(key)) {
+                    convertedObject[key] = jsonObject[key];
+                }
+            }
+            return convertedObject;
+        }
+
+        function setUserIdIfReady(userId) {
+            try {
+                if (analytics) {
+                    setUserId(analytics, userId);
+                } else {
+                    firebaseLogger("Firebase Analytics not initialized yet when set user id");
+                }
+            } catch (e) {
+                console.error("❌ Firebase logging failed:", error);
+            }
+        }
+        function logEventIfReady(eventName, params) {
+            try {
+                if (analytics) {
+                    //console.log(" logEventIfReady : " + eventName);
+
+                    params = params || {};
+                    params.deviceId = deviceId.toString();
+                    logEvent(analytics, eventName, params);
+                } else {
+                    console.log("Firebase Analytics not initialized yet");
+                }
+            } catch (e) {
+                console.error("❌ Firebase logging failed:", error);
+            }
+        }
+        window.firebaseLogEventIfReady = logEventIfReady;
+
+        function firebaseLogEvent(eventKey, jsonString, userId) {
+            //console.log(" firebaseLogEvent : " + eventKey + jsonString);
+            if (eventKey == "empty" && jsonString == "empty") {
+                setUserIdIfReady(userId);
+            } else {
+                const convertedObject = convertJsonString(jsonString);
+                logEventIfReady(eventKey, convertedObject);
+            }
+        }
+        window.firebaseLogEvent = firebaseLogEvent;
+        // Add Environment Field To Firebase
+        if (firebaseConfig === firebaseDevelopConfig) {
+            logEventIfReady('game_environment', { environment: 'development' });
+        } else {
+            logEventIfReady('game_environment', { environment: 'production' });
+        }
+
+        function getDeviceInfo() {
+            const deviceInfo = {};
+
+            // Device model (User-Agent information from the browser)
+            deviceInfo.deviceModel = navigator.userAgent || "Unknown";
+
+            // Operating system
+            deviceInfo.operatingSystem = navigator.platform || "Unknown";
+
+            // Screen resolution
+            deviceInfo.screenWidth = window.screen.width || 0;
+            deviceInfo.screenHeight = window.screen.height || 0;
+
+            // Available screen width and height (excluding system UI elements like taskbars)
+            deviceInfo.availWidth = window.screen.availWidth || 0;
+            deviceInfo.availHeight = window.screen.availHeight || 0;
+
+            // Device pixel ratio
+            deviceInfo.devicePixelRatio = window.devicePixelRatio || 1;
+
+            // Browser language
+            deviceInfo.language = navigator.language || "Unknown";
+
+            // Browser memory (in GB, supported by some browsers)
+            deviceInfo.memory = navigator.deviceMemory ? `${navigator.deviceMemory} GB` : "Unknown";
+
+            // CPU information (number of threads, supported by some browsers)
+            deviceInfo.cpuCores = navigator.hardwareConcurrency || "Unknown";
+
+            // Network information
+            if (navigator.connection) {
+                const connection = navigator.connection;
+                deviceInfo.networkType = connection.effectiveType || "Unknown"; // Network type (e.g., wifi, 4g)
+                deviceInfo.downlinkSpeed = connection.downlink ? `${connection.downlink} Mbps` : "Unknown"; // Estimated downlink speed
+            } else {
+                deviceInfo.networkType = "Unknown";
+                deviceInfo.downlinkSpeed = "Unknown";
+            }
+
+            // GPU information (using WebGL for some browsers)
+            try {
+                const canvas = document.createElement("canvas");
+                const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+                const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+                if (debugInfo) {
+                    deviceInfo.graphicsDeviceName = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) || "Unknown"; // GPU name
+                    deviceInfo.graphicsVendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL) || "Unknown"; // GPU vendor
+                } else {
+                    deviceInfo.graphicsDeviceName = "Unknown";
+                    deviceInfo.graphicsVendor = "Unknown";
+                }
+            } catch (e) {
+                deviceInfo.graphicsDeviceName = "Unknown";
+                deviceInfo.graphicsVendor = "Unknown";
+            }
+
+            // Timezone offset (in minutes)
+            deviceInfo.timezoneOffset = new Date().getTimezoneOffset();
+
+            // Current timestamp
+            deviceInfo.timestamp = Date.now();
+
+            deviceInfo.devicePlatform = window.getDevicePlatform();
+            deviceInfo.isWebView = window.isWebView() ? 1 : 0;
+            deviceInfo.devicePixelRatio = window.getTargetDevicePixelRatio();
+            deviceInfo.img_compress_support = window.checkTextureCompressionSupport();
+
+            // Return the device information
+            return deviceInfo;
+        }
+
+
+        function getDeviceInfoForLogEvent() {
+            const deviceInfo = getDeviceInfo(); // Call the getDeviceInfo function
+
+            // Reformat the data to match the logEvent function requirements
+            const formattedDeviceInfo = {
+                device_model: deviceInfo.deviceModel, // Device model
+                os_info: deviceInfo.operatingSystem, // Operating system
+                system_memory_size: deviceInfo.memory, // System memory size
+                graphics_name: deviceInfo.graphicsDeviceName, // Graphics card name
+                language: deviceInfo.language, // Device language
+                cpu: deviceInfo.cpuCores, // Number of CPU cores
+                screen_width: deviceInfo.screenWidth, // Screen width in pixels
+                screen_height: deviceInfo.screenHeight, // Screen height in pixels
+                net_info: deviceInfo.networkType, // Network type
+                timezone_offset: deviceInfo.timezoneOffset, // Timezone offset in minutes
+                timestamp: deviceInfo.timestamp, // Current timestamp in milliseconds
+                device_platform: deviceInfo.devicePlatform, // ios android or pc
+                is_webview: deviceInfo.isWebView, // is webview in ios or android
+                device_pixel_ratio: deviceInfo.devicePixelRatio, // device rate
+                img_compress_support: deviceInfo.img_compress_support, // image compress support
+            };
+
+            return formattedDeviceInfo;
+        }
+
+        function sendDeviceInfoEvent() {
+            const analyticsData = getDeviceInfoForLogEvent(); // Fetch formatted device info
+            firebaseLogger("Formatted Device Info:");
+            firebaseLogger(" Device Info:" + JSON.stringify(analyticsData, null, 2)); // Pretty-print as JSON
+            // Assume this is the event logging function
+            logEventIfReady('device_info_game', analyticsData);
+        }
+
+        // Call to send the event
+        sendDeviceInfoEvent();
+
+        function aes256Decode(base64Encoded, key) {
+            var encryptedBytes = CryptoJS.enc.Base64.parse(base64Encoded);
+            var decrypted = CryptoJS.AES.decrypt({ ciphertext: encryptedBytes }, CryptoJS.enc.Utf8.parse(key), {
+                mode: CryptoJS.mode.ECB,
+                padding: CryptoJS.pad.Pkcs7
+            });
+            var decryptedJson = decrypted.toString(CryptoJS.enc.Utf8);
+            return decryptedJson;
+        }
+
+
+        // 生成设备唯一标识
+        function generateDeviceId() {
+            let deviceId;
+
+            try {
+                if (typeof uuid === "undefined") {
+                    throw new Error("UUID library is not loaded");
+                }
+
+                const userAgent = navigator.userAgent;
+                const platform = navigator.platform;
+                const language = navigator.language || navigator.userLanguage;
+                const deviceInfo = `${userAgent}-${platform} -${language}`;
+                deviceId = uuid.v5(deviceInfo, uuid.v5.URL);
+
+                localStorage.setItem('deviceId', deviceId);
+
+            } catch (error) {
+                firebaseLogger('UUID generation failed, using fallback method ');
+                // Fallback method if UUID library is not available
+                deviceId = "undefined";
+                localStorage.setItem('deviceId', deviceId);
+            }
+
+            return deviceId;
+        }
+
+
+        // Log JavaScript errors to Firestore
+        async function logJsError(error, errorName = "js_errors") {
+            try {
+                firebaseLogger(errorName, error);
+                const docRef = await addDoc(collection(db, errorName), {
+                    message: error?.message || String(error) || "Unknown error",
+                    stack: error?.stack || "No stack trace",
+                    url: window.location.href,
+                    userAgent: navigator.userAgent,
+                    timestamp: new Date().toISOString(),
+                });
+                console.log("[表情] Error logged successfully, ID:", docRef.id);
+            } catch (e) {
+                console.error("[表情] Failed to log error:", e);
+            }
+        }
+
+        window.logJsError = logJsError;
+
+        // Capture global errors
+        window.onerror = function (message, source, lineno, colno, error) {
+            logJsError(error || { message: String(message), stack: `at ${source}:${lineno}:${colno}` });
+        };
+
+        // Capture unhandled promise rejections
+        window.addEventListener("unhandledrejection", (event) => {
+            logJsError(event.reason);
+        });
+
+    </script>
+</body>
+</html>

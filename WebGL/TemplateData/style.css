@@ -1,0 +1,304 @@
+
+:root {
+    --scale: 1;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    overflow: hidden; /* 防止浏览器出现滚动条 */
+    /*width: 100%;
+    height: 100%;*/
+}
+
+/* Remove default style when button is clicked */
+button:active, button:focus {
+    outline: none; /* Remove outline when clicked */
+    background-color: transparent; /* Only remove background color, not the background image */
+    box-shadow: none; /* Remove shadow effect */
+}
+
+#unity-container {
+    position: absolute;
+}
+
+    #unity-container.unity-desktop {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    #unity-container.unity-mobile {
+        position: fixed;
+        width: 100%;
+        height: 100%
+    }
+
+#unity-canvas {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+   /* position: absolute;
+    top: 0;
+    left: 0;*/
+}
+
+.unity-mobile #unity-canvas {
+    width: 100%;
+    height: 100%
+}
+
+#unity-logo {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    width: 512px;
+    height: 512px;
+    transform: translate(-50%, -50%);
+    background: url('512.png') no-repeat center
+}
+
+/*
+#unity-loading-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: none
+}
+
+#unity-progress-bar-empty {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    width: 900px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    background: url('loading_1.png') no-repeat center
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 14px;
+    background: url('loading_2.png') no-repeat center
+}
+*/
+
+/* 加载栏容器 */
+#unity-loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 7px;
+    display: block;
+    background-color: transparent;
+    z-index: 1000; /* 保证加载栏在所有内容之上 */
+}
+
+/* 进度条背景 */
+#unity-progress-bar-empty {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+/* 进度条前景 */
+#unity-progress-bar-full {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #FDF241, #7CDF95); /* 从黄色到绿色的渐变 */
+    transition: width 0.5s ease, background-color 0.5s ease; /* 设置平滑的过渡效果 */
+}
+
+
+/* "CONNECTING..." 文本样式 */
+#connecting-text {
+    position: fixed;
+    left: 0;
+    bottom: 100%; /* 文本位于进度条上方 */
+    font-size: 33px;
+    color: #57B2D5; /* 初始颜色为蓝绿色 */
+    font-family: Arial, sans-serif;
+    transform: translateY(-10px); /* 适当调整文本位置 */
+}
+
+/* 新增网络信息文本样式 */
+#network-text {
+    position: fixed;
+    left: 0;
+    top: 100%; /* 位于加载栏下方 */
+    font-size: 20px;
+    color: #7C7C7C;
+    font-family: serif;
+    transform: translateY(20px); /* 适当调整文本位置 */
+    display: none; /* 初始隐藏 */
+}
+
+#unity-footer {
+    position: relative
+}
+
+.unity-mobile #unity-footer {
+    display: none
+}
+
+/*#unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }*/
+
+
+.suporte-dialog-view {
+    position: absolute;
+    right: 34%;
+    top: 15px;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.suporte-dialog-view-img {
+    width: 90px;
+    height: 90px;
+}
+
+.suporte-dialog-view-phone {
+    position: absolute;
+    right: 3%;
+    top: 1%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.suporte-dialog-view-img-phone {
+    width: 180px;
+    height: 180px;
+}
+
+
+
+.common-dialog-view {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.54);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.common-dialog {
+    height: calc(200px * var(--scale));
+    width: calc(400px * var(--scale));
+    /*min-width: 400px;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: #999;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #1B1B1B; /*todo: Different apps need to modify this color */
+    /*background-color: #1896a7;*/
+    /*opacity: 0.1;*/
+    /*background-color: transparent;*/
+    border-radius: 10px;
+    border: none;
+}
+
+    .common-dialog a {
+        color: white;
+        font-size: calc(20px * var(--scale));
+    }
+
+.common-dialog-button-view {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.left-button {
+    background-color: black;
+    border: #05C93F 3px solid; /*todo: Different apps need to modify this color */
+    height: calc(50px * var(--scale));
+    width: calc(150px * var(--scale));
+    color: white;
+    border-radius: calc(30px * var(--scale));
+    font-size: calc(15px * var(--scale));
+}
+
+.right-button {
+    background-color: black;
+    border: #05C93F 2px solid; /*todo: Different apps need to modify this color */
+    height: calc(50px * var(--scale));
+    width: calc(150px * var(--scale));
+    color: white;
+    border-radius: calc(30px * var(--scale));
+    font-size: calc(15px * var(--scale));
+    background-color: #05C93F; /*todo: Different apps need to modify this color */
+}
+
+.iframe-style {
+    width: 100vw;
+    height: 95vh;
+    position: relative;
+    z-index: 8000;
+    display: none;
+}
+
+.iframe-home-img {
+    z-index: 9000;
+    display: none;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    background: transparent;
+    width: 50px;
+    height: 62px;
+}
+.wrap-text {
+    width: 300px; /* ����һ���̶����� */
+    /*border: 1px solid #ccc;*/ /* ��ѡ��Ϊ���ӻ�Ч�����ӱ߿� */
+    /*padding: 10px;*/
+    word-wrap: break-word; /* �Զ����� */
+    word-break: break-all; /* ��Գ����ʽ��л��� */
+    white-space: pre-wrap; /* �����հ׷����Զ����� */
+}
+
+.iframe-home-img-phone {
+    z-index: 9000;
+    display: none;
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    background: transparent;
+    width: 50px;
+    height: 62px;
+}
+
+/* Make the button cover the entire screen */
+.btn-back-home-on-error {
+    position: fixed; /* Fixed position on the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Make the button transparent */
+    border: none; /* Remove button borders */
+    cursor: pointer; /* Show pointer cursor on hover */
+    display: none;
+}

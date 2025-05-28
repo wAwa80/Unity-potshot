@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>xix.bet</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <!-- Preload the resource -->
+    <link rel="preload" href="Build/WebGL.data.unityweb" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="Build/WebGL.framework.js.unityweb" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="Build/WebGL.loader.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="Build/WebGL.wasm.unityweb" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="StreamingAssets/Assetbundles/WebGL/luabytes_dc2f33bb820b999b536274c46fdc4531.bundle" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="StreamingAssets/Assetbundles/WebGL/localprefab_38455e748008d845ad6516e3cb71fba9.bundle" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="StreamingAssets/Assetbundles/WebGL/slotcommon_d0456009a0b19b2423cfcb97a1ca8f59.bundle" as="fetch" crossorigin="anonymous">
+    <script>
+        function Logger(str) {
+            if (false) {
+                console.log(str);
+            }
+        }
+
+        var urlParams = new URLSearchParams(window.location.search);
+        function JsGetUrlParamHead(paramName) {
+            var paramValue = urlParams.get(paramName);
+            return paramValue;
+        }
+        var sourceValue = JsGetUrlParamHead('from');
+        var pxidValue = JsGetUrlParamHead('pxid');
+        function hasLetter(str) {
+            return /[a-zA-Z]/.test(str);
+        }
+        if (sourceValue == null && pxidValue !== null) {
+            var boolISSoure = hasLetter(pxidValue);
+            if (boolISSoure) {
+                sourceValue = 'tiktok';
+            } else {
+                sourceValue = 'kwai';
+            }
+        }
+        if (sourceValue !== null) {
+            switch (sourceValue) {
+                case 'tiktok':
+                    !function (w, d, t) {
+                        w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
+                    }(window, document, 'ttq');
+                    ttq.load(pxidValue);
+                    ttq.page();
+                    break;
+                case 'kwai':
+                    !function (e, t) { "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.install = t() : e.install = t() }(window, (function () { return function (e) { var t = {}; function n(r) { if (t[r]) return t[r].exports; var o = t[r] = { i: r, l: !1, exports: {} }; return e[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports } return n.m = e, n.c = t, n.d = function (e, t, r) { n.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r }) }, n.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, n.t = function (e, t) { if (1 & t && (e = n(e)), 8 & t) return e; if (4 & t && "object" == typeof e && e && e.__esModule) return e; var r = Object.create(null); if (n.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e) for (var o in e) n.d(r, o, function (t) { return e[t] }.bind(null, o)); return r }, n.n = function (e) { var t = e && e.__esModule ? function () { return e.default } : function () { return e }; return n.d(t, "a", t), t }, n.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, n.p = "", n(n.s = 0) }([function (e, t, n) { "use strict"; var r = this && this.__spreadArray || function (e, t, n) { if (n || 2 === arguments.length) for (var r, o = 0, i = t.length; o < i; o++)!r && o in t || (r || (r = Array.prototype.slice.call(t, 0, o)), r[o] = t[o]); return e.concat(r || Array.prototype.slice.call(t)) }; !function (e) { var t = window; t.KwaiAnalyticsObject = e, t[e] = t[e] || []; var n = t[e]; n.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"]; var o = function (e, t) { e[t] = function () { var n = Array.from(arguments), o = r([t], n, !0); e.push(o) } }; n.methods.forEach((function (e) { o(n, e) })), n.instance = function (e) { var t = n._i[e] || []; return n.methods.forEach((function (e) { o(t, e) })), t }, n.load = function (t, r) { n._i = n._i || {}, n._i[t] = [], n._i[t]._u = "https://s1.kwai.net/kos/s101/nlav11187/pixel/custom/events-nr.js", n._t = n._t || {}, n._t[t] = +new Date, n._o = n._o || {}, n._o[t] = r || {}; var o = document.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = "https://s1.kwai.net/kos/s101/nlav11187/pixel/custom/events-nr.js?sdkid=" + t + "&lib=" + e; var i = document.getElementsByTagName("script")[0]; i.parentNode.insertBefore(o, i) } }("kwaiq") }]) }));
+                    kwaiq.load(pxidValue);
+                    kwaiq.page();
+                    break;
+                case 'meta':
+                    Logger('from : ' + sourceValue);
+                    break;
+                default:
+                    Logger(sourceValue + 'pxid error');
+            }
+        } else {
+            Logger('from error');
+        }
+    </script>
+
+</head>
+<body>
+    <div id="unity-container" class="unity-desktop">
+        <div id="dialogSuporte" class="suporte-dialog-view"
+             onclick="onClickSuporteRight('suporteRight')">
+            <img class="suporte-dialog-view-img" src="./TemplateData/gn_Suporte1.png" alt="">
+        </div>
+        <div id="dialogSuportePhone" class="suporte-dialog-view-phone"
+             onclick="onClickSuporteRight('suporteRight')">
+            <img class="suporte-dialog-view-img-phone" src="./TemplateData/gn_Suporte1.png" alt="">
+        </div>
+        <div id="dialogCommon" class="common-dialog-view">
+            <div class="common-dialog">
+                <a>dicas</a>
+                <a id="dialogMsg" class="wrap-text"></a>
+                <div class="common-dialog-button-view">
+                    <button class="left-button" type="submit" onclick="closeDialog()">Fechar</button>
+                    <button class="right-button" type="submit" onclick="onClickRightButton()">Go</button>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="unity-canvas" width="1920" height="1080"></canvas>
+        <div id="unity-loading-bar">
+            <div id="connecting-text">CONNECTING...</div> <!-- 新增文本元素 -->
+            <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+            </div>
+            <div id="network-text" style="display: none;">You're on the best network route available.</div> <!-- 新增文本 -->
+        </div>
+        <div id="unity-warning"></div>
+        <!--<div id="unity-footer">
+      <div id="unity-webgl-logo"></div>
+      <div id="unity-fullscreen-button"></div>
+      <div id="unity-build-title">Slots Lucky</div>
+    </div>-->
+    </div>
+    <!-- iframe元素 -->
+    <iframe id="embedded-iframe" class="iframe-style" style="display: none;">
+    </iframe>
+    <img id="img-home-iframe" onclick="onBackHome()" class="iframe-home-img" src="./TemplateData/ui_an_lobby1.png" />
+    <img id="img-home-iframe-phone" onclick="onBackHome()" class="iframe-home-img-phone" src="./TemplateData/ui_an_lobby1.png" />
+
+
+    <script>
+        var hasBar = true;
+        var loadingBar;
+        var progressBarFull;
+        var container = document.querySelector("#unity-container");
+        var canvas = document.querySelector("#unity-canvas");
+        if (hasBar) {
+            loadingBar = document.querySelector("#unity-loading-bar");
+            progressBarFull = document.querySelector("#unity-progress-bar-full");
+            var connectingText = document.getElementById("connecting-text");
+            var networkText = document.getElementById("network-text");
+        }
+        var embeddedIframe = document.getElementById('embedded-iframe');
+        var homeButton = document.querySelector('#img-home-iframe');
+        var homeButtonPhone = document.querySelector('#img-home-iframe-phone');
+
+        var showDialog = false;
+        var chatUrl = '';
+
+        //var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+        //var warningBanner = document.querySelector("#unity-warning");
+
+        // Shows a temporary message banner/ribbon for a few seconds, or
+        // a permanent error message on top of the canvas if type=='error'.
+        // If type=='warning', a yellow highlight color is used.
+        // Modify or remove this function to customize the visually presented
+        // way that non-critical warnings and error messages are presented to the
+        // user.
+        function unityShowBanner(msg, type) {
+            function updateBannerVisibility() {
+                //warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+            }
+
+            var div = document.createElement('div');
+            div.innerHTML = msg;
+            //warningBanner.appendChild(div);
+            if (type == 'error') div.style = 'background: red; padding: 10px;';
+            else {
+                if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+                setTimeout(function () {
+                    //warningBanner.removeChild(div);
+                    updateBannerVisibility();
+                }, 5000);
+            }
+            updateBannerVisibility();
+        }
+
+        var buildUrl = "Build";
+        var loaderUrl = buildUrl + "/WebGL.loader.js";
+        var config = {
+            dataUrl: buildUrl + "/WebGL.data.unityweb",
+            frameworkUrl: buildUrl + "/WebGL.framework.js.unityweb",
+            codeUrl: buildUrl + "/WebGL.wasm.unityweb",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "xix.bet",
+            productName: "xix.bet",
+            productVersion: "6.0.3.4",
+            showBanner: unityShowBanner,
+        };
+
+        // By default Unity keeps WebGL canvas render target size matched with
+        // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+        // Set this to false if you want to decouple this synchronization from
+        // happening inside the engine, and you would instead like to size up
+        // the canvas DOM size and WebGL render target sizes yourself.
+        // config.matchWebGLToCanvasSize = false;
+
+        // 更新canvas尺寸的函数, 保持原本的比例（选择较小的比例）进行缩放
+        function updateCanvasSize() {
+            // 原始宽高
+            const originalWidth = 1920;
+            const originalHeight = 1080;
+            // 获取当前浏览器窗口宽高
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            
+            // 计算宽高比例
+            const widthRatio = windowWidth / originalWidth;
+            const heightRatio = windowHeight / originalHeight;
+
+            // 选择较小的比例，以保持宽高比不变
+            const ratio = Math.min(widthRatio, heightRatio);
+
+            // 根据比例设置canvas的宽高
+            var setWidth = windowWidth;// originalWidth * ratio;
+            var setHeight = windowHeight; //originalHeight * ratio;
+            //if (setWidth < windowWidth) {
+            //    setWidth = windowWidth;
+            //}
+            canvas.style.width = setWidth + 'px';
+            canvas.style.height = setHeight + 'px';
+        }
+
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            // Mobile device style: fill the whole browser client area with the game canvas:
+            //var meta = document.createElement('meta');
+            //meta.name = 'viewport';
+            //meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            //document.getElementsByTagName('head')[0].appendChild(meta);
+            //container.className = "unity-mobile";
+            // To lower canvas resolution on mobile devices to gain some
+            // performance, uncomment the following line:
+            config.devicePixelRatio = 1;
+            //canvas.className = "unity-mobile";
+
+            //var meta = document.createElement('meta');
+            //meta.name = 'viewport';
+            //meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            //document.getElementsByTagName('head')[0].appendChild(meta);
+
+            container.className = "unity-mobile";
+            canvas.className = "unity-mobile";
+
+            // Avoid draining fillrate performance on mobile devices,
+            // and default/override low DPI mode on mobile browsers.
+            //config.devicePixelRatio = 1;
+            //unityShowBanner('WebGL builds are not supported on mobile devices.');
+        } else {
+
+            // 监听窗口尺寸变化事件
+            window.addEventListener('resize', updateCanvasSize);
+
+            // 初始调用以设置初始尺寸
+            updateCanvasSize();
+            //config.devicePixelRatio = 1;
+            //canvas.className = "unity-mobile";
+            //var width = window.innerWidth;
+            //var height = window.innerHeight;
+            //if (isMacOS()) {
+            //    canvas.style.width = width - 100 + "px";
+            //    canvas.style.height = height - 100 + "px";
+            //    config.devicePixelRatio = 0;
+            //}
+            //else {
+            //    canvas.style.width = width + "px";
+            //    canvas.style.height = height + "px";
+            //    config.devicePixelRatio = 0.7;
+            //}
+            //Logger("------ width : ");
+            //Logger("------ width : " + width.toString() + "  height :" + height.toString());
+        }
+        if (hasBar) {
+            loadingBar.style.display = "block";
+        }
+
+        var script = document.createElement("script");
+        var gameInstance = null;
+        script.src = loaderUrl;
+        script.onload = () => {
+            gameInstance = createTuanjieInstance(canvas, config, (progress) => {
+                if (hasBar) {
+                    progressBarFull.style.width = 100 * progress + "%";
+                    if (progress === 1) {
+                        // 进度条加载完成后
+                        connectingText.textContent = "CONNECTED SUCCESSFULLY";
+                        connectingText.style.color = "#65CBA0";
+                        progressBarFull.style.backgroundColor = "#65CBA0";
+                        networkText.style.display = "block";
+
+                        setTimeout(() => {
+                            loadingBar.style.display = "none";
+                            connectingText.style.display = "none";
+                            progressBarFull.style.display = "none";
+                            networkText.style.display = "none";
+                        }, 500); // 延迟100毫秒
+                    }
+                }
+            });
+            gameInstance.then((unityInstance) => {
+
+                //fullscreenButton.onclick = () => {
+                //    unityInstance.SetFullscreen(1);
+                //};
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
+
+        //addEventListener
+        window.addEventListener("orientationchange", function () {
+            var orientation = window.orientation;
+            if (orientation === 0 || orientation === 180) {
+                // Portrait mode
+                Logger("Switched to portrait mode.");
+                // when portrait mode to hide navbar
+                document.documentElement.style.overflow = 'auto';
+                gameInstance.then((unityInstance) => {
+                    unityInstance.SendMessage("UnityJsBridge", "JsToUnityOrientationChange", "Portrait");
+                });
+            } else {
+                // Landscape mode
+                Logger("Switched to landscape mode.");
+                // the iOS Safari when landscape mode need show navbar
+                //window.scrollTo(0, 1);
+                var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                if (isSafari) {
+                    document.documentElement.style.overflow = 'auto';
+                    window.scrollTo(0, 0);
+                    Logger("Switched to landscape mode. isSafari ");
+                }
+                gameInstance.then((unityInstance) => {
+                    unityInstance.SendMessage("UnityJsBridge", "JsToUnityOrientationChange", "Landscape");
+                });
+            }
+        });
+
+        let urlParametersAsJson = null;
+        // 当页面加载时，获取并显示URL参数
+        window.onload = function () {
+            urlParametersAsJson = getUrlParametersAsJson();
+            Logger(jsonParams); // 在控制台打印参数JSON字符串
+            document.getElementById("params").textContent = jsonParams;
+        }
+
+        function useUrlJsonParameters() {
+            Logger(" useUrlJsonParameters : " + urlParametersAsJson);
+            return urlParametersAsJson;
+        }
+
+        //JsGetUrlParam
+        var urlParams = new URLSearchParams(window.location.search);
+
+        function JsGetUrlParam(paramName) {
+            Logger("paramName start " + paramName);
+            var paramValue = urlParams.get(paramName);
+            if (paramValue) {
+                paramValue = paramValue.replace(/ /g, '+');  // 将所有空格替换为加号
+            }
+            Logger("paramValue end " + paramValue);
+            return paramValue;
+        }
+
+        // 函数：获取URL中的所有参数并转换为JSON字符串
+        function getUrlParametersAsJson() {
+            // 获取查询字符串
+            const queryString = window.location.search;
+            // 创建 URLSearchParams 对象
+            const urlParams = new URLSearchParams(queryString);
+            // 用于存储参数的对象
+            const params = {};
+
+            // 遍历所有参数并存储到对象中
+            for (const [key, value] of urlParams.entries()) {
+                params[key] = value;
+            }
+
+            // 将对象转换为JSON字符串
+            return JSON.stringify(params);
+        }
+
+        function GetPlatformType() {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                Logger("this is mobile device");
+                return "MobileWeb";
+            } else {
+                Logger("this is PC device");
+                return "PCWeb";
+            }
+        }
+
+        GetPlatformType();
+
+        function CheckOrientation() {
+            var orientation = window.orientation;
+            if (orientation === 0 || orientation === 180) {
+                Logger("Device current mode is Portrait");
+                return "Portrait";
+            } else if (orientation === 90 || orientation === -90) {
+                return "Landscape";
+            } else {
+                return "Null";
+            }
+        }
+
+        function IsSafari() {
+            return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        }
+
+        function isMacOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            return userAgent.indexOf('Mac') !== -1;
+        }
+
+        //check screen orientation, if no to lock landscape
+        function JsSetOrientationLandscape() {
+            var isSafari = IsSafari();
+            Logger("isSafari" + isSafari.toString());
+            if (!isSafari) {
+                var element = document.documentElement;
+                if (element.requestFullscreen) {
+                    Logger("element.requestFullscreen ");
+                    element.requestFullscreen();
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                    Logger("element.webkitRequestFullscreen ");
+
+                } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                    Logger("element.mozRequestFullScreen ");
+
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                    Logger("element.msRequestFullscreen ");
+
+                }
+                // Android need to hide navbar
+                if (!window.screen.orientation.locked) {
+                    window.screen.orientation.lock('landscape');
+                }
+            }
+        }
+
+        //cancel lock
+        function JsCancelOrientationLandscape() {
+            if (document.fullscreenElement !== null) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            }
+            // unlock
+            if (window.screen.orientation && window.screen.orientation.locked) {
+                window.screen.orientation.unlock();
+            }
+            // show navbar
+            document.documentElement.style.overflow = 'auto';
+        }
+
+        function Logger(str) {
+            if (false) {
+                console.log(str);
+            }
+        }
+
+        // custom error tips
+        function CustomErrorHandler(msg, url, line, col, error) {
+            Logger("Error:", msg, "at", url, "line:", line, "col:", col, "error:", error);
+            return true;
+        }
+
+        window.onerror = CustomErrorHandler;
+
+        function WindowOpenURL(url) {
+            Logger("WindowOpenURL" + url);
+            // if (IsSafari()) {
+            //     const a = document.createElement('a');
+            //     a.href = url;
+            //     document.body.appendChild(a);
+            //     a.click();
+            //     document.body.removeChild(a);
+            //     return;
+            // }
+            const newWindow = window.open(url, '_blank');
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                // 如果 newWindow 为空，或者被关闭，或者未定义，则说明被浏览器阻止了
+                return false;
+
+            } else {
+                // 如果能够成功打开新窗口，则 newWindow 将指向新窗口的 window 对象
+                return true;
+            }
+        }
+
+
+        let dialogType = '';
+        let dialogMsg = '';
+        let dialogUrl = '';
+
+        //account login customer
+        function showTopRightDialog() {
+            dialogType = 'suporteRight';
+            dialogUrl = "https://chat.ichatlink.net/widget/standalone.html?eid=a990f3f0bedb29ab26127c1e82b1b06b&groupid=5db65f095143a21cf0aa9e4fee865521&language=pt";
+            let dialogSuporte = document.querySelector('#dialogSuporte');
+            let dialogSuportePhone = document.querySelector('#dialogSuportePhone');
+            setScale()
+            if (config.devicePixelRatio == 1) {
+                dialogSuportePhone.setAttribute('style', 'display:flex')
+            } else {
+                dialogSuporte.setAttribute('style', 'display:flex')
+            }
+        }
+
+        // 截取前60个字符
+        function truncateString(str, num) {
+            if (str.length > num) {
+                return str.slice(0, num) + '...';
+            } else {
+                return str;
+            }
+        }
+
+        function openDialogIfRequestBlocked(type, msg) {
+            let dialogCommon = document.querySelector('#dialogCommon');
+            let dialogMsgA = document.querySelector('#dialogMsg');
+            let rightButton = document.querySelector('.right-button');
+
+            switch (type) {
+                case 'pay':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = msg;
+                    rightButton.innerHTML = 'Pagamento';
+                    break;
+                case 'copy':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = truncateString(msg, 60);//msg;
+                    rightButton.innerHTML = 'cópia';
+                    break;
+                case 'paste':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = msg;
+                    rightButton.innerHTML = 'colar';
+                    break;
+                case 'suporte':
+                    dialogCommon.setAttribute('style', 'display:flex')
+                    dialogMsgA.innerHTML = msg;
+                    rightButton.innerHTML = 'Suporte';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function openDialog(type, msg, url) {
+            dialogType = type;
+            dialogMsg = msg;
+            dialogUrl = url;
+            setScale()
+            if (IsSafari()) { //***
+                openDialogIfRequestBlocked(type, msg);
+            } else {
+                if (type == 'suporte' || type == 'suporteRight' || type == 'pay') {
+                    //window.open(url, '_blank');
+                    var isSuccess = WindowOpenURL(url);
+                    if (!isSuccess) {
+                        openDialogIfRequestBlocked(type, msg);
+                    }
+                } else if (type == 'copy') {
+                    copyTextToClipboard(msg, function () {
+                        openDialogIfRequestBlocked(type, msg);
+                    });
+                    //Toast('Copiado com sucesso!')
+                } else if (type == 'paste') {
+                    pasteTextFromClipboard(msg);
+                }
+            }
+        }
+
+        //set screen scale, mobile: 2、pc: 1
+        function setScale() {
+            if (config.devicePixelRatio == 1) {
+                let element = document.querySelector(".common-dialog");
+                // Get CSS variables on any Dom node
+                element.style.getPropertyValue("--scale");
+                getComputedStyle(element).getPropertyValue("--scale");
+                element.style.setProperty("--scale", 2.4);
+                element.style.setProperty("--suporte-dialog-view-right", 10);
+            }
+        }
+
+        function closeDialog() {
+            let dialogCommon = document.querySelector('#dialogCommon');
+            let dialogSuporte = document.querySelector('#dialogSuporte');
+            let dialogSuportePhone = document.querySelector('#dialogSuportePhone');
+
+            if (dialogType == 'suporte') {
+                dialogCommon.setAttribute('style', 'display:none')
+            } else if (dialogType == 'suporteRight') {
+                dialogSuporte.setAttribute('style', 'display:none')
+                dialogSuportePhone.setAttribute('style', 'display:none')
+            } else if (dialogType == 'pay') {
+                dialogCommon.setAttribute('style', 'display:none')
+            } else if (dialogType == 'copy' || dialogType == 'paste') {
+                dialogCommon.setAttribute('style', 'display:none')
+            } else {
+                dialogCommon.setAttribute('style', 'display:none')
+            }
+            dialogType = '';
+            dialogMsg = '';
+            dialogUrl = '';
+        }
+
+        // close login customer
+        function onClickSuporteRight(type) {
+
+            if (type == 'suporteRight') {
+                window.open(dialogUrl, '_blank')
+            }
+        }
+        // close iframe click
+        function onBackHome(type) {
+            let embeddedIframe = document.querySelector('#embedded-iframe');
+            homeButton.setAttribute('style', 'display:none')
+            homeButtonPhone.setAttribute('style', 'display:none')
+            embeddedIframe.setAttribute('style', 'display:none')
+            closeIframe();
+        }
+
+        //dialog button event
+        function onClickRightButton(type) {
+            switch (dialogType) {
+                case 'pay':
+                    window.open(dialogUrl, '_blank')
+                    break;
+                case 'copy':
+                    copyTextToClipboard(dialogMsg)
+                    //Toast('Copiado com sucesso!')
+                    break;
+                case 'paste':
+                    pasteTextFromClipboard(dialogMsg)
+                    break;
+                case 'suporte':
+                    window.open(dialogUrl, '_blank')
+                    break;
+                default:
+                    break;
+            }
+
+            closeDialog()
+        }
+
+        function Toast(msg, duration) {
+            duration = isNaN(duration) ? 3000 : duration;
+            var m = document.createElement('div');
+            m.innerHTML = msg;
+            //config.devicePixelRatio == 1 is mobile ，，，otherwise is pc
+            if (config.devicePixelRatio == 1) m.style.cssText = "max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999999999;background: rgba(0, 0, 0,.7);font-size: 32px;";
+            if (config.devicePixelRatio != 1) m.style.cssText = "max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+            document.body.appendChild(m);
+            setTimeout(function () {
+                var d = 0.5;
+                m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+                m.style.opacity = '0';
+                setTimeout(function () {
+                    document.body.removeChild(m)
+                }, d * 1000);
+            }, duration);
+        }
+
+
+        function copyTextToClipboard(text, errorCallback) {
+            console.log('copyTextToClipboard------', text)
+            if (!navigator.clipboard) {
+                Logger("browser not support clipboard copy API");
+
+                var tempInput = document.createElement("input");
+                tempInput.value = text;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+                Logger("browser use another Copy API");
+
+                // 在备用方法执行后，尝试读取剪贴板内容判断是否复制成功
+                var clipboardContent = document.createElement("textarea");
+                document.body.appendChild(clipboardContent);
+                clipboardContent.focus();
+                document.execCommand("paste");
+                var clipboardText = clipboardContent.value;
+                document.body.removeChild(clipboardContent);
+
+                if (clipboardText === text) {
+                    console.log("Text successfully copied using another Copy API");
+                } else {
+                    if (errorCallback != null) {
+                        errorCallback();
+                    }
+                    console.log("Text copy using another Copy API was unsuccessful");
+                }
+                return;
+            }
+
+            navigator.clipboard.writeText(text).then(function () {
+                Logger("text successful copy to clipboard");
+            }).catch(function (err) {
+                if (errorCallback != null) {
+                    errorCallback();
+                }
+                Logger("text unsuccessful copy to clipboard", err);
+            });
+        }
+
+        function pasteTextFromClipboard() {
+            Logger("browser not support clipboard paste API");
+            var tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.focus();
+            document.execCommand("paste");
+            var pastedText = tempInput.value;
+            document.body.removeChild(tempInput);
+            Logger("browser use another Paste API : " + pastedText);
+            return pastedText;
+        }
+
+        //--- Controller iframe slots
+        // hide UnityInstance
+        function hideUnityInstance() {
+            container.style.display = 'none';
+        }
+
+        // show UnityInstance
+        function showUnityInstance() {
+            container.style.display = 'block';
+        }
+
+        // load iframe
+        function loadIframeWithParams(url) {
+            hideUnityInstance();
+            //embeddedIframe.src = 'about:blank';
+            //embeddedIframe.src = url;
+            //embeddedIframe.style.display = 'block';
+            let iframe = document.createElement('iframe');
+            iframe.src = url;
+            iframe.id = 'myIframe';
+            iframe.width = '100%';
+            iframe.style.border = 'none'; // 可选：移除iframe边框
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.style.height = `${window.innerHeight}px`; // 设置初始高度为窗口高度
+            // 添加监听器以在窗口大小变化时调整iframe高度
+            window.addEventListener('resize', function () { iframe.style.height = `${window.innerHeight}px`; });
+            document.body.appendChild(iframe);
+
+            if (config.devicePixelRatio == 1) {
+                homeButtonPhone.style.display = 'block';
+            } else {
+                homeButton.style.display = 'block';
+            }
+        }
+        // close iframe and show UnityInstance
+        function closeIframe() {
+            //embeddedIframe.style.display = 'none';
+            destroyIframe('myIframe')
+            //setTimeout(function () {
+            //    //embeddedIframe.src = 'https://huidu.bet/game/gamesUrl?id=00';
+            //}, 2000); // Delay in milliseconds (e.g., 2000 ms = 2 seconds)
+            homeButtonPhone.style.display = 'none';
+            homeButton.style.display = 'none';
+            showUnityInstance();
+            gameInstance.then((unityInstance) => {
+                unityInstance.SendMessage("UnityJsBridge", "RefreshLuaBalance", "Refresh");
+            });
+        }
+
+
+        function destroyIframe(iframeId) {
+            let iframe = document.getElementById(iframeId);
+            if (iframe) {
+                // clear src res
+                iframe.src = 'javascript:void(0)';
+                // 从DOM中移除iframe
+                iframe.parentNode.removeChild(iframe);
+            }
+        }
+        function showHomeButton(url) {
+
+        }
+        function closeHomeButton(url) {
+
+        }
+        // --- send event func
+        function tikTokPixelSendEvent(Key) {
+            if (sourceValue == 'tiktok' && pxidValue !== null && ttq !== null) {
+                ttq.track(Key)
+            }
+            Logger("text sendEvent Key: " + Key);
+        }
+
+        function tikTokPixelSendDicEvent(Key, Contents) {
+            if (sourceValue == 'tiktok' && pxidValue !== null && ttq !== null) {
+                ttq.track(Key, Contents)
+            }
+            Logger("text sendDicEvent Key: " + Key);
+            Logger("text sendDicEvent Contents: ", Contents);
+        }
+        function kwaiPixelSendEvent(Key) {
+            if (sourceValue == 'kwai' && pxidValue !== null && kwaiq !== null) {
+                kwaiq.instance(pxidValue).track(Key)
+            }
+            Logger("text sendEvent Key: " + Key);
+        }
+
+        function kwaiPixelSendDicEvent(Key, Contents) {
+            if (sourceValue == 'kwai' && pxidValue !== null && kwaiq !== null) {
+                kwaiq.instance(pxidValue).track(Key, Contents)
+            }
+            Logger("text sendDicEvent Key: " + Key);
+            Logger("text sendDicEvent Contents: " + Contents);
+        }
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+        import { getAnalytics, logEvent, setUserId } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+        //const firebaseReleaseConfig = {
+        //    apiKey: "AIzaSyAcoKRPXDZ3fUoTokxRSnBprGNUSIDHvTI",
+        //    authDomain: "slotslucky777-47f27.firebaseapp.com",
+        //    databaseURL: "https://slotslucky777-47f27-default-rtdb.firebaseio.com",
+        //    projectId: "slotslucky777-47f27",
+        //    storageBucket: "slotslucky777-47f27.appspot.com",
+        //    messagingSenderId: "315894765548",
+        //    appId: "1:315894765548:web:fcc1fae2b2e0f4bd8752c9",
+        //    measurementId: "G-KSKQ7G6FK3"
+        //};
+        const firebaseReleaseConfig = {
+            apiKey: "AIzaSyDzCyDLLOG4ytWsH9wXHw6bQi2wsCqYDnw",
+            authDomain: "xix-bet-release.firebaseapp.com",
+            projectId: "xix-bet-release",
+            storageBucket: "xix-bet-release.appspot.com",
+            messagingSenderId: "674412753248",
+            appId: "1:674412753248:web:533c55116fac22a52d6e05",
+            measurementId: "G-MG9DVNLESS"
+        };
+
+        const firebaseDevelopConfig = {
+            apiKey: "AIzaSyAcoKRPXDZ3fUoTokxRSnBprGNUSIDHvTI",
+            authDomain: "slotslucky777-47f27.firebaseapp.com",
+            databaseURL: "https://slotslucky777-47f27-default-rtdb.firebaseio.com",
+            projectId: "slotslucky777-47f27",
+            storageBucket: "slotslucky777-47f27.appspot.com",
+            messagingSenderId: "315894765548",
+            appId: "1:315894765548:web:c45687f8391247ae8752c9",
+            measurementId: "G-NGB7NK39E6"
+        };
+
+        function checkURLForFields() {
+            const url = window.location.href;
+            const fields = ["localhost", "127.0.0.1", "192.168", "cloudfront", ".amazonaws.com"];
+            for (const field of fields) {
+                if (url.includes(field)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        let firebaseConfig;
+        if (checkURLForFields()) {
+            firebaseConfig = firebaseDevelopConfig;
+            Logger("The URL contains one of the specified fields.");
+        } else {
+            firebaseConfig = firebaseReleaseConfig;
+            Logger("The URL does not contain any of the specified fields.");
+        }
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        logEvent(analytics, 'game_start', {
+            content_type: '1',
+        });
+
+        Logger(" game_start ");
+
+        function Logger(str) {
+            if (false) {
+                console.log(str);
+            }
+        }
+
+        // Convert Json String
+        function convertJsonString(jsonString) {
+            // Convert Json To Object
+            const jsonObject = JSON.parse(jsonString);
+            const convertedObject = {};
+            for (const key in jsonObject) {
+                if (jsonObject.hasOwnProperty(key)) {
+                    convertedObject[key] = jsonObject[key];
+                }
+            }
+            return convertedObject;
+        }
+
+        function firebaseLogEvent(eventKey, jsonString, userId) {
+            if (eventKey == "empty" && jsonString == "empty") {
+                setUserId(analytics, userId);
+            } else {
+                const convertedObject = convertJsonString(jsonString);
+                logEvent(analytics, eventKey, convertedObject);
+            }
+        }
+        window.firebaseLogEvent = firebaseLogEvent;
+        // Add Environment Field To Firebase
+        if (firebaseConfig === firebaseDevelopConfig) {
+            logEvent(analytics, 'game_environment', { environment: 'development' });
+        } else {
+            logEvent(analytics, 'game_environment', { environment: 'production' });
+        }
+    </script>
+</body>
+</html>

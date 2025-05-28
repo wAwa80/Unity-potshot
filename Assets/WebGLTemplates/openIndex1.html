@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>xix.bet</title>
+    <style>
+      
+        :root {
+            --scale: 1;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            overflow: hidden; /* 防止浏览器出现滚动条 */
+            /*width: 100%;
+            height: 100%;*/
+        }
+
+        .iframe-home-img {
+            z-index: 9000;
+            display: block;
+            position: absolute;
+            top: 1%;
+            left: 1%;
+            background: transparent;
+            width: 80px;
+            height: 98px;
+        }
+
+       /* .button {
+            position: absolute;
+            width: 100px;
+            height: 124px;
+            background: transparent;
+            border: 0;
+            z-index: 9000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .button img {
+                max-width: 50%;
+                max-height: 50%;
+            }*/
+
+        #img-home-iframe {
+            top: 1%;
+            left: 1%;
+        }
+
+        #img-home-iframe-phone {
+            top: 1%;
+            left: 12%;
+        }
+    </style>
+
+    <link rel="preload" href="./resource/ui_an_lobby1.png" as="image">
+</head>
+<body>
+    <img id="img-home-iframe" onclick="onBackHome()" class="iframe-home-img" src="./resource/ui_an_lobby1.png" />
+
+    <script>
+        // Function to get query parameter by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        function loadIframe(url) {
+            console.log("Loading iframe with URL:", url);
+            loadIframeWithParams(url);
+        }
+
+        // load iframe
+        function loadIframeWithParams(url) {
+            try {
+                let iframe = document.createElement('iframe');
+                iframe.src = url;
+                iframe.id = 'myIframe';
+                iframe.width = '100%';
+                iframe.style.border = 'none'; // 可选：移除iframe边框
+                iframe.style.position = 'absolute';
+                iframe.style.top = '0';
+                iframe.style.left = '0';
+                iframe.style.height = `${window.innerHeight}px`; // 设置初始高度为窗口高度
+                // 添加监听器以在窗口大小变化时调整iframe高度
+                window.addEventListener('resize', function () { iframe.style.height = `${window.innerHeight}px`; });
+                document.body.appendChild(iframe);
+            } catch (error) {
+                console.error('Error creating or appending iframe:', error);
+            }
+        }
+
+        // close iframe
+        function closeIframe() {
+            destroyIframe('myIframe');
+        }
+
+        function onBackHome() {
+            onClick();
+            closeIframe();
+        }
+
+        const homeUrl = getQueryParam('homeUrl');
+        function recursiveBack() {
+            // 获取当前页面的 URL
+            const currentUrl = window.location.href;
+
+            // 检查 homeUrl 和当前页面的 URL
+            if (homeUrl && currentUrl !== homeUrl) {
+                // 使用 setTimeout 允许浏览器处理当前的历史记录条目
+                setTimeout(() => {
+                    window.history.back();
+                    recursiveBack();  // 递归调用
+                }, 100); // 延迟时间可以根据需要调整
+            } else {
+                // 如果匹配或 homeUrl 不存在，可以处理后续逻辑
+                console.log('已返回到或匹配 homeUrl');
+                // 可以选择跳转到 homeUrl，或者处理其他逻辑
+                // window.location.href = homeUrl;  // 如果需要
+            }
+        }
+
+        function onClick() {
+            recursiveBack()
+        }
+
+        // 获取 URL 参数并加载 iframe
+        const urlParam = getQueryParam('url');
+        if (urlParam) {
+            loadIframe(urlParam);
+        }
+
+        // test code : 
+        //loadIframe("http://192.168.6.228:8038/?isEncrypt=true&member_account=sss122&member_password=qqq111&game_id=10102&game_guest=false&server_url=http%3A%2F%2F192.168.6.128:9001");
+    </script>
+</body>
+</html>
