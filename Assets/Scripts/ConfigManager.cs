@@ -124,11 +124,11 @@ public struct LevelData
 {
     public int levelId;
 
-    public int[] normal;
+    public int[] normal; // 普通预设集合
 
-    public int[] boss;
+    public int[] boss; // boss prefab
 
-    public int[] normalLose;
+    public int[] normalLose; // 
 
     public int[] bossLose;
 
